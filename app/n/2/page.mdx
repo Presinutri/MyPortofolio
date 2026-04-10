@@ -1,135 +1,140 @@
 export const metadata = {
-  title: '6 Sneaky JavaScript Patterns to Cut Boilerplate',
+  title: 'Fleet Management System – GPS Realtime Monitoring',
   alternates: {
     canonical: '/n/2',
   },
 };
 
-# 6 Sneaky JavaScript Patterns to Cut Boilerplate
+{/* Header */}
+<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+  <div>
+    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Fleet Management System</h1>
+    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 02 / GPS REALTIME MONITORING</p>
+  </div>
+  <div className="text-right text-gray-600">
+    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
+    <p className="text-3xl font-bold text-black">2023</p>
+  </div>
+</div>
 
-<br />
+{/* Konten Utama */}
+<div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-Micro-optimizations and quality-of-life hacks to keep your scripts lean, readable, and bug-resistant.
+  {/* Kolom Kiri */}
+  <div>
+    ## <T id="Konteks & Masalah" en="Context & Problem" />
+    <T
+      id="Operasional armada di site mining memiliki ratusan unit alat berat yang bergerak setiap saat. Tanpa sistem monitoring terpusat, pengawasan posisi unit, status operasional, dan efisiensi bahan bakar dilakukan secara manual — menyebabkan blind spot data, keterlambatan respons insiden, dan pemborosan biaya operasional."
+      en="Mining site fleet operations involve hundreds of heavy equipment units moving at all times. Without a centralized monitoring system, tracking unit positions, operational status, and fuel efficiency was done manually — causing data blind spots, delayed incident response, and operational cost waste."
+    />
 
-## 1. **Optional Chaining `?.` + Nullish Coalescing `??`**
+    <div className="my-8 p-5 bg-gray-50 rounded-xl border border-gray-100">
+      <h3 className="font-bold text-gray-800 mb-3 text-lg">🚛 <T id="Lingkup Armada" en="Fleet Scope" /></h3>
+      <div className="grid grid-cols-2 gap-3 text-sm">
+        <div className="bg-white p-3 rounded-lg border border-gray-200">
+          <p className="font-bold text-2xl text-yellow-600">150+</p>
+          <p className="text-gray-500 text-xs mt-1"><T id="Unit Alat Berat Terpantau" en="Monitored Heavy Equipment Units" /></p>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-gray-200">
+          <p className="font-bold text-2xl text-blue-600">24/7</p>
+          <p className="text-gray-500 text-xs mt-1"><T id="Monitoring Realtime GPS" en="GPS Realtime Monitoring" /></p>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-gray-200">
+          <p className="font-bold text-2xl text-green-600">3 Site</p>
+          <p className="text-gray-500 text-xs mt-1"><T id="Lokasi Operasional" en="Operational Locations" /></p>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-gray-200">
+          <p className="font-bold text-2xl text-purple-600">&lt;30s</p>
+          <p className="text-gray-500 text-xs mt-1"><T id="Update Interval GPS" en="GPS Update Interval" /></p>
+        </div>
+      </div>
+    </div>
 
-Stop writing five nested guards:
+    ## <T id="Solusi & Fitur" en="Solution & Features" />
 
-```js
-// Old
-const theme = user && user.settings && user.settings.theme
-  ? user.settings.theme
-  : 'light';
+    <T
+      id="Sistem Fleet Management dibangun dengan integrasi GPS tracker pada setiap unit, terhubung ke dashboard web realtime yang dapat diakses oleh dispatcher, supervisor, dan manajemen."
+      en="The Fleet Management System was built with GPS tracker integration on every unit, connected to a real-time web dashboard accessible by dispatchers, supervisors, and management."
+    />
 
-// New
-const theme = user?.settings?.theme ?? 'light';
-````
+    **<T id="Fitur Utama:" en="Key Features:" />**
+    * **Live Map Tracking** — <T id="Visualisasi posisi seluruh armada pada peta interaktif secara realtime" en="Real-time visualization of all fleet positions on an interactive map" />
+    * **<T id="Status Unit" en="Unit Status" />** — <T id="Monitor status (Beroperasi / Idle / Breakdown / Parkir) setiap unit" en="Monitor status (Operating / Idle / Breakdown / Parked) for each unit" />
+    * **Geofencing Alert** — <T id="Notifikasi otomatis jika unit keluar batas area kerja yang ditentukan" en="Automatic notification if a unit leaves the defined work area boundary" />
+    * **History Playback** — <T id="Rekam jejak perjalanan unit dapat diputar ulang per hari / shift" en="Unit journey records can be replayed by day / shift" />
+    * **Fuel Efficiency Report** — <T id="Laporan konsumsi BBM vs output produktivitas per unit" en="Fuel consumption vs productivity output report per unit" />
+    * **Maintenance Reminder** — <T id="Peringatan jadwal servis berdasarkan HM (Hour Meter) unit" en="Service schedule reminder based on unit HM (Hour Meter)" />
+    * **Remote Control Panel** — <T id="Supervisor dapat mengirim instruksi / perintah ke unit tertentu" en="Supervisors can send instructions / commands to specific units" />
 
-Fewer lines, same safety.
+    {/* Section Leadership */}
+    <div className="p-6 my-10 bg-gray-50 border-l-4 border-blue-600 rounded-r-lg">
+      <h2 className="text-2xl font-bold text-blue-900 !mt-0">Leadership & Management Impact</h2>
+      * **Stakeholder Alignment** — <T id="Koordinasi intensif dengan tim operasional, mekanik, dan manajemen untuk menentukan KPI fleet yang relevan." en="Intensive coordination with operational, mechanic, and management teams to define relevant fleet KPIs." />
+      * **Vendor Integration** — <T id="Negosiasi dan integrasi teknis dengan 2 vendor GPS hardware yang berbeda dalam satu platform terpadu." en="Negotiation and technical integration with 2 different GPS hardware vendors into one unified platform." />
+      * **SOP Digitalisasi** — <T id="Memimpin proses digitalisasi SOP laporan fleet dari kertas ke dashboard digital." en="Led the process of digitalizing fleet report SOPs from paper to a digital dashboard." />
+    </div>
+  </div>
+
+  {/* Kolom Kanan */}
+  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
+    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+      <p className="text-xs font-mono text-yellow-700 uppercase tracking-widest mb-2">Tech Stack</p>
+      <div className="flex flex-wrap gap-2">
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Node-red</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Node.js</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">PostgreSQL</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">C#</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">MQTT</span>
+      </div>
+    </div>
+
+    <div className="p-4 bg-white border border-gray-200 rounded-xl">
+      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
+      <div className="space-y-3">
+        <div>
+          <p className="text-xs text-gray-400"><T id="Response Time Insiden" en="Incident Response Time" /></p>
+          <p className="text-2xl font-extrabold text-green-600">-65%</p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400">Fuel Monitoring Accuracy</p>
+          <p className="text-2xl font-extrabold text-blue-600">98.5%</p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400">Unit Idle Time</p>
+          <p className="text-2xl font-extrabold text-orange-600">-40%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Bagian Impact */}
+<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Cost Impact</h3>
+    <p className="text-xs text-gray-500"><T id="Penghematan BBM & Maintenance / Tahun:" en="Fuel & Maintenance Savings / Year:" /></p>
+    <p className="text-4xl font-extrabold text-green-600">Rp 200jt+</p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Melalui efisiensi idle time dan optimasi rute armada."
+        en="Through idle time efficiency and fleet route optimization."
+      />
+    </p>
+  </div>
+  
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Operational Impact</h3>
+    <p className="text-xs text-gray-500"><T id="Visibilitas Fleet:" en="Fleet Visibility:" /></p>
+    <p className="text-4xl font-extrabold text-blue-600">100%</p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Semua unit terpantau realtime tanpa blind spot operasional."
+        en="All units monitored in real-time with no operational blind spots."
+      />
+    </p>
+  </div>
+</div>
 
 ---
-
-## 2. **Barrel Files for One-Line Imports**
-
-Aggregate related exports into a single “barrel” file:
-
-```js
-// utils/index.js
-export * from './format';
-export * from './validate';
-export * from './fetch';
-
-// SomeComponent.js
-import { formatDate, validateEmail, getJSON } from '@/utils';
-```
-
-Kill import clutter without sacrificing tree-shaking.
-
----
-
-## 3. **Memoize Pure Functions with a `WeakMap`**
-
-Cache heavy computations tied to objects—no leaks:
-
-```js
-const cache = new WeakMap();
-
-export function expensive(obj) {
-  if (cache.has(obj)) return cache.get(obj);
-  const result = crunchNumbers(obj); // 🚀 costly
-  cache.set(obj, result);
-  return result;
-}
-```
-
-Results follow the object’s lifetime—GC does the cleanup.
-
----
-
-## 4. **Tagged Template Literals for Safe HTML**
-
-Prevent XSS without a third-party lib:
-
-```js
-const escape = (strings, ...values) =>
-  strings.reduce(
-    (acc, str, i) =>
-      acc +
-      str +
-      (values[i]
-        ? String(values[i]).replace(/[&<>"']/g, (s) => ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;',
-          })[s])
-        : ''),
-    '',
-  );
-
-const name = '<script>alert(1)</script>';
-document.body.innerHTML = escape`<p>Hello, ${name}!</p>`;
-```
-
-Zero dependencies, maximum safety.
-
----
-
-## 5. **`AbortController` for Cancellable `fetch`**
-
-Stop orphaning network calls on route changes:
-
-```js
-const controller = new AbortController();
-const { signal } = controller;
-
-fetch('/api/data', { signal })
-  .then((r) => r.json())
-  .catch((e) => {
-    if (e.name !== 'AbortError') throw e;
-  });
-
-// later…
-controller.abort();
-```
-
-No more “state update on unmounted component” warnings.
-
----
-
-## 6. **Format Like a Native with `Intl`**
-
-Forget custom helpers—use the built-ins:
-
-```js
-const usd = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-}).format(1999.99); // "$1,999.99"
-
-const isoDate = new Intl.DateTimeFormat('sv-SE').format(new Date());
-// "2025-06-05"
-```
-
-Locale-aware, performant, and zero bloat.
+<BackButton />

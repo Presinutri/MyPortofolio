@@ -1,66 +1,210 @@
 export const metadata = {
-  title: '5 Tiny CLI Tricks You (Probably) Didn’t Know',
+  title: 'ARG – Automatic Rain Gauge Alert System',
   alternates: {
     canonical: '/n/1',
   },
 };
 
-# 5 Tiny CLI Tricks You (Probably) Didn’t Know
+{/* Header */}
+<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+  <div>
+    <h1 className="text-4xl font-extrabold tracking-tighter text-black">ARG – Rain Alert System</h1>
+    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 01 / MINING SAFETY & IoT</p>
+  </div>
+  <div className="text-right text-gray-600">
+    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
+    <p className="text-3xl font-bold text-black">2022</p>
+  </div>
+</div>
 
-<br />
+{/* Konten Utama */}
+<div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-A lightning-round of command-line nuggets to level-up your dev workflow.
+  {/* Kolom Kiri */}
+  <div>
+    ## <T id="Konteks & Masalah" en="Context & Problem" />
+    <T
+      id="Operasional tambang terbuka sangat rentan terhadap curah hujan tinggi. Selama ini, informasi mulai dan berhentinya hujan hanya bergantung pada laporan manual dari pengawas lapangan — lambat, subjektif, dan sering terlambat. Keputusan seperti menghentikan atau melanjutkan operasi alat berat tertunda karena tidak ada data curah hujan yang akurat dan realtime."
+      en="Open-pit mining operations are highly vulnerable to heavy rainfall. Historically, information about rain start and stop depended solely on manual reports from field supervisors — slow, subjective, and often delayed. Decisions such as halting or resuming heavy equipment operations were postponed due to the lack of accurate, real-time rainfall data."
+    />
 
-## 1. **`history | grep` + `fzf` = instant recall**
+    <div className="my-8 space-y-4">
 
-Fish out that elusive command you ran last Tuesday:
+      {/* Sensor Card */}
+      <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="text-3xl">🌧️</span>
+          <div>
+            <h3 className="font-bold text-blue-900 text-lg"><T id="Arsitektur Sistem ARG" en="ARG System Architecture" /></h3>
+            <p className="text-xs text-blue-500 font-mono uppercase tracking-widest">End-to-End IoT Pipeline</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-2 text-sm">
+          <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center gap-3">
+            <span className="text-2xl">💧</span>
+            <div>
+              <p className="font-bold text-gray-800">Tipping Bucket Rain Gauge</p>
+              <p className="text-gray-500 text-xs">
+                <T
+                  id="Sensor presisi untuk mengukur curah hujan — setiap tip bucket merepresentasikan 0.2 mm hujan"
+                  en="Precision sensor to measure rainfall — each bucket tip represents 0.2 mm of rain"
+                />
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center gap-3">
+            <span className="text-2xl">🔧</span>
+            <div>
+              <p className="font-bold text-gray-800">Arduino Module Box</p>
+              <p className="text-gray-500 text-xs">
+                <T
+                  id="Arduino + modul komunikasi + power management dikemas dalam satu box module tahan cuaca untuk integrasi di lapangan"
+                  en="Arduino + communication module + power management packed into one weatherproof module box for field integration"
+                />
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center gap-3">
+            <span className="text-2xl">⚡</span>
+            <div>
+              <p className="font-bold text-gray-800">Node-RED (Data Pipeline)</p>
+              <p className="text-gray-500 text-xs">
+                <T
+                  id="Membaca data dari Arduino secara realtime (per detik), memproses trigger start/stop hujan, dan mengirim ke database"
+                  en="Reads data from Arduino in real-time (per second), processes rain start/stop triggers, and sends to the database"
+                />
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center gap-3">
+            <span className="text-2xl">🗄️</span>
+            <div>
+              <p className="font-bold text-gray-800">SQL Server (Database)</p>
+              <p className="text-gray-500 text-xs">
+                <T
+                  id="Penyimpanan data curah hujan per detik — menjadi basis data historis dan trigger untuk sistem alert"
+                  en="Per-second rainfall data storage — becomes the historical database and trigger for the alert system"
+                />
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-3 rounded-lg border border-blue-100 flex items-center gap-3">
+            <span className="text-2xl">🔔</span>
+            <div>
+              <p className="font-bold text-gray-800"><T id="Sistem Alert Realtime" en="Realtime Alert System" /></p>
+              <p className="text-gray-500 text-xs">
+                <T
+                  id="Notifikasi otomatis dikirim ke supervisor tambang saat hujan mulai (start) dan berhenti (stop) tanpa intervensi manual"
+                  en="Automatic notifications sent to mine supervisors when rain starts and stops — no manual intervention required"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-```bash
-history | grep docker | fzf
-````
+    ## <T id="Solusi & Dampak" en="Solution & Impact" />
 
-Hit **Enter** and it pastes right back to your prompt like magic.
+    <T
+      id="Sistem ARG dibangun sebagai solusi IoT end-to-end yang menghubungkan sensor fisik di lapangan dengan database dan sistem notifikasi secara mulus. Sensor tipping bucket mendeteksi setiap jatuhan hujan, Arduino memproses sinyal dan mengirimkan data melalui Node-RED yang berjalan secara kontinu per detik ke SQL Server. Dari sana, logika bisnis menentukan kapan status hujan berubah menjadi Hujan Mulai atau Hujan Berhenti dan langsung mengirimkan alert ke pihak terkait."
+      en="The ARG system was built as an end-to-end IoT solution that seamlessly connects physical field sensors with a database and notification system. The tipping bucket sensor detects every raindrop, Arduino processes the signal and transmits data through Node-RED running continuously per second to SQL Server. Business logic then determines when rain status changes to Rain Start or Rain Stop and immediately sends alerts to stakeholders."
+    />
+
+    {/* Section Leadership */}
+    <div className="p-6 my-10 bg-gray-50 border-l-4 border-blue-600 rounded-r-lg">
+      <h2 className="text-2xl font-bold text-blue-900 !mt-0">Safety & Operational Impact</h2>
+      * **<T id="Kecepatan Respons" en="Response Speed" />** — <T id="Alert dikirim dalam hitungan detik setelah sensor mendeteksi perubahan kondisi hujan." en="Alerts are sent within seconds after the sensor detects a change in rainfall conditions." />
+      * **<T id="Keputusan Berbasis Data" en="Data-driven Decision" />** — <T id="Supervisor kini memiliki dasar data objektif untuk menghentikan atau melanjutkan operasi alat berat." en="Supervisors now have an objective data basis to halt or resume heavy equipment operations." />
+      * **Audit Trail** — <T id="Seluruh data curah hujan tersimpan per detik di SQL Server sebagai rekam jejak operasional tambang." en="All rainfall data is stored per-second in SQL Server as an operational audit trail for the mine." />
+    </div>
+  </div>
+
+  {/* Kolom Kanan */}
+  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
+    <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+      <p className="text-xs font-mono text-blue-700 uppercase tracking-widest mb-2">Tech Stack</p>
+      <div className="flex flex-wrap gap-2">
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Arduino</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Tipping Bucket</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Node-RED</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">IoT</span>
+      </div>
+    </div>
+
+    <div className="p-4 bg-white border border-gray-200 rounded-xl">
+      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
+      <div className="space-y-3">
+        <div>
+          <p className="text-xs text-gray-400"><T id="Frekuensi Data Masuk" en="Data Input Frequency" /></p>
+          <p className="text-2xl font-extrabold text-blue-600"><T id="1 / detik" en="1 / second" /></p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400"><T id="Waktu Alert (sejak deteksi)" en="Alert Time (since detection)" /></p>
+          <p className="text-2xl font-extrabold text-green-600">&lt; 5 <T id="detik" en="sec" /></p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400"><T id="Intervensi Manual" en="Manual Intervention" /></p>
+          <p className="text-2xl font-extrabold text-orange-600">0%</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="p-4 bg-gray-50 border border-gray-200 rounded-xl">
+      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3"><T id="Alur Data" en="Data Flow" /></p>
+      <div className="space-y-2 text-xs font-mono text-gray-600">
+        <div className="flex items-center gap-2">
+          <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">1</span>
+          <span>Tipping Bucket → <T id="sinyal" en="signal" /></span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-6 h-6 rounded-full bg-blue-200 text-blue-800 flex items-center justify-center font-bold text-xs">2</span>
+          <span>Arduino box → <T id="proses" en="process" /></span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-6 h-6 rounded-full bg-blue-300 text-blue-900 flex items-center justify-center font-bold text-xs">3</span>
+          <span>Node-RED → streaming</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-6 h-6 rounded-full bg-blue-400 text-white flex items-center justify-center font-bold text-xs">4</span>
+          <span>SQL Server → store</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="w-6 h-6 rounded-full bg-yellow-400 text-yellow-900 flex items-center justify-center font-bold text-xs">5</span>
+          <span>Alert → supervisor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Bagian Impact */}
+<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Safety Impact</h3>
+    <p className="text-xs text-gray-500"><T id="Waktu Alert Hujan ke Supervisor:" en="Rain Alert Time to Supervisor:" /></p>
+    <p className="text-4xl font-extrabold text-blue-600">&lt; 5 <T id="dtk" en="sec" /></p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Dari sebelumnya 10–30 menit laporan manual oleh pengawas lapangan."
+        en="Down from the previous 10–30 minutes of manual reporting by field supervisors."
+      />
+    </p>
+  </div>
+  
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Data Granularity</h3>
+    <p className="text-xs text-gray-500"><T id="Resolusi Data Curah Hujan:" en="Rainfall Data Resolution:" /></p>
+    <p className="text-4xl font-extrabold text-green-600">1 <T id="detik" en="second" /></p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Data per detik via Node-RED → SQL Server, mendukung analisis historis presisi tinggi."
+        en="Per-second data via Node-RED → SQL Server, supporting high-precision historical analysis."
+      />
+    </p>
+  </div>
+</div>
 
 ---
-
-## 2. **Reverse-search a Git log by file *content***
-
-Combine `git log` with `-S` (search diff) to find when a string first appeared:
-
-```bash
-git log -S"resizeObserver" --oneline -- src/components/Layout.tsx
-```
-
----
-
-## 3. **JSON-pretty print … with zero dependencies**
-
-Mac & Linux already ship with `python3`:
-
-```bash
-cat response.json | python3 -m json.tool | less
-```
-
----
-
-## 4. **One-liner port-forwarding for quick demos**
-
-Need to expose `localhost:3000`? Use SSH—no ngrok token needed.
-
-```bash
-ssh -R 80:localhost:3000 ssh.localhost.run
-```
-
-Now share the generated URL on Slack and watch eyebrows rise.
-
----
-
-## 5. **Measure *anything* with `time` + subshell**
-
-How long does your linter actually take?
-
-```bash
-time (npm run lint > /dev/null)
-```
-
-> 💡 *Pro-tip:* wrap this in a `pre-push` hook so slow commands get caught early.
+<BackButton />

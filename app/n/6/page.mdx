@@ -1,0 +1,162 @@
+export const metadata = {
+  title: 'Digitools - Advance Tools Services',
+  alternates: {
+    canonical: '/n/6',
+  },
+};
+
+{/* Header */}
+<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+  <div>
+    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Digitools - Advance Tools Services</h1>
+    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 06 / ADVANCED MECHANIC TOOLS</p>
+  </div>
+  <div className="text-right text-gray-600">
+    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
+    <p className="text-3xl font-bold text-black">2024</p>
+  </div>
+</div>
+
+{/* Konten Utama */}
+<div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
+
+  {/* Kolom Kiri */}
+  <div>
+    ## <T id="Konteks & Masalah" en="Context & Problem" />
+    <T
+      id="Peminjaman dan pengembalian alat mekanik (mechanic tools) tadinya sering tidak terkontrol. Pengawasan yang manual oleh tools keeper menyulitkan pelacakan siapa yang meminjam alat dan siapa yang belum mengembalikannya. Seringkali alat hilang, lupa dikembalikan saat pergantian shift, atau rusak tanpa rekam jejak yang jelas, sehingga menghambat operasional perbaikan unit."
+      en="Borrowing and returning mechanic tools was previously often uncontrolled. Manual supervision by tools keepers made it difficult to track who borrowed tools and who hadn't returned them. Tools were frequently lost, forgotten to be returned during shift changes, or broken without clear trace records, hindering unit repair operations."
+    />
+
+    <div className="my-8 p-5 bg-purple-50 rounded-xl border border-purple-100">
+      <h3 className="font-bold text-purple-800 mb-3 text-lg">🧰 <T id="Solusi Advance Tools Services" en="Advance Tools Services Solution" /></h3>
+      <div className="grid grid-cols-1 gap-2 text-sm">
+        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
+          <span className="text-2xl">💻</span>
+          <div>
+            <p className="font-bold text-gray-800"><T id="Aplikasi Desktop Khusus" en="Dedicated Desktop App" /></p>
+            <p className="text-gray-500 text-xs">
+              <T
+                id="Sistem operasi utama berbasis desktop yang dikelola secara eksklusif oleh tools keeper di lokasi penyimpanan."
+                en="Main desktop-based operating system managed exclusively by tools keepers at the storage location."
+              />
+            </p>
+          </div>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
+          <span className="text-2xl">📱</span>
+          <div>
+            <p className="font-bold text-gray-800"><T id="Login Scan QR 1PAMA App" en="1PAMA App QR Scan Login" /></p>
+            <p className="text-gray-500 text-xs">
+              <T
+                id="Mekanik meminjam alat dengan cara login scan QR Code Profile dari ponsel mereka melalui aplikasi 1PAMA."
+                en="Mechanics borrow tools by logging in via a QR Code Profile scan from their phones using the 1PAMA App."
+              />
+            </p>
+          </div>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
+          <span className="text-2xl">📊</span>
+          <div>
+            <p className="font-bold text-gray-800"><T id="Dashboard Realtime Peminjaman" en="Realtime Borrowing Dashboard" /></p>
+            <p className="text-gray-500 text-xs">
+              <T
+                id="Tools keeper bisa langsung melihat laporan daftar alat yang dipinjam, siapa peminjamnya, dan siapa yang belum mengembalikan."
+                en="Tools keepers can instantly view a report of borrowed tools, who borrowed them, and who hasn't returned them."
+              />
+            </p>
+          </div>
+        </div>
+        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
+          <span className="text-2xl">🔔</span>
+          <div>
+            <p className="font-bold text-gray-800"><T id="Alert Pengingat Shift" en="Shift Reminder Alert" /></p>
+            <p className="text-gray-500 text-xs">
+              <T
+                id="Jika hingga akhir shift alat belum dikembalikan, alert pengingat akan otomatis dikirim ke 1PAMA App sang mekanik."
+                en="If tools are not returned by the end of the shift, a reminder alert is automatically sent to the mechanic's 1PAMA App."
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    ## <T id="Solusi & Dampak" en="Solution & Impact" />
+
+    <T
+      id="Dengan implementasi Digitools ini, seluruh siklus perpindahan inventaris fisik (mechanic tools) menjadi digital sepenuhnya. Proses verifikasi serah terima sangat akurat karena terkunci dengan otentikasi QR Code individual. Otomatisasi notifikasi akhir shift memotong keharusan tools keeper untuk mengejar peminjam secara manual."
+      en="With the implementation of Digitools, the entire physical inventory (mechanic tools) transfer cycle is fully digitized. The handover verification process is highly accurate, locked with individual QR Code authentication. End-of-shift automated notifications eliminate the need for tools keepers to chase borrowers manually."
+    />
+
+    {/* Section Leadership */}
+    <div className="p-6 my-10 bg-gray-50 border-l-4 border-purple-600 rounded-r-lg">
+      <h2 className="text-2xl font-bold text-purple-900 !mt-0">Asset Security & Compliance</h2>
+      * **Traceability** — <T id="Tidak ada lagi perdebatan posisi barang. Log siapa peminjam dan kapan alat dipinjam direkam dengan timestamp presisi." en="No more debate over item locations. Logs of who borrowed and when they were borrowed are recorded with precise timestamps." />
+      * **Integration** — <T id="Berhasil mengintegrasikan sistem profil aplikasi existing (1PAMA App) dengan platform desktop yang terisolasi." en="Successfully integrated the existing application profile system (1PAMA App) with isolated desktop platforms." />
+      * **Deterrence Effect** — <T id="Secara psikologis, kedisiplinan kru mekanik meningkat karena mereka sadar alat yang terlambat dikembalikan memicu notifikasi peringatan ke atasan." en="Psychologically, mechanic crew discipline improved because they recognized late returns triggered warning notifications to superiors." />
+    </div>
+  </div>
+
+  {/* Kolom Kanan */}
+  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
+    <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl">
+      <p className="text-xs font-mono text-purple-700 uppercase tracking-widest mb-2">Tech Stack</p>
+      <div className="flex flex-wrap gap-2">
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Desktop App</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">C#</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">WPF</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
+        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">1PAMA API</span>
+      </div>
+    </div>
+
+    <div className="p-4 bg-white border border-gray-200 rounded-xl">
+      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
+      <div className="space-y-3">
+        <div>
+          <p className="text-xs text-gray-400"><T id="Tingkat Kehilangan Alat" en="Tool Loss Rate" /></p>
+          <p className="text-2xl font-extrabold text-green-600">-90%</p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400"><T id="Akurasi Peminjaman" en="Borrowing Accuracy" /></p>
+          <p className="text-2xl font-extrabold text-blue-600">100%</p>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400"><T id="Kepatuhan Pengembalian Tepat Waktu" en="On-Time Return Compliance" /></p>
+          <p className="text-2xl font-extrabold text-orange-600">95%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Bagian Impact */}
+<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Loss Prevention Impact</h3>
+    <p className="text-xs text-gray-500"><T id="Laporan Alat Hilang / Tidak Terlacak:" en="Lost / Untracked Tool Reports:" /></p>
+    <p className="text-4xl font-extrabold text-green-600">ZERO</p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Inventaris selalu stabil dan jelas pertanggungjawabannya setiap pergantian shift."
+        en="Inventory is always stable and its accountability is clear at every shift change."
+      />
+    </p>
+  </div>
+  
+  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
+    <h3 className="text-lg font-semibold text-gray-600">Efficiency Impact</h3>
+    <p className="text-xs text-gray-500"><T id="Durasi Validasi Peminjaman:" en="Borrowing Validation Duration:" /></p>
+    <p className="text-4xl font-extrabold text-purple-600">&lt; 3 <T id="detik" en="sec" /></p>
+    <p className="text-sm text-gray-700 mt-2">
+      <T
+        id="Mekanik hanya perlu scan QR dari 1PAMA App tanpa pencatatan manual panjang."
+        en="Mechanics only need to scan their QR from the 1PAMA App without tedious manual logging."
+      />
+    </p>
+  </div>
+</div>
+
+---
+<BackButton />
