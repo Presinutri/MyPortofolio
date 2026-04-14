@@ -1,217 +1,224 @@
-<section className="min-h-screen flex flex-col justify-center items-start border-b border-gray-200 px-8 py-20 bg-white">
-  <div className="flex flex-col md:flex-row gap-6 mb-10 items-center"> 
-    <div className="w-32 h-32 rounded-full border-4 border-blue-900 overflow-hidden bg-gray-200">
-       <img 
-         src="/fariz-photo.jpg" 
-         alt="Fariz Albab" 
-         className="w-full h-full object-cover"
-       />
+<section className="min-h-[80vh] flex flex-col justify-center px-8 py-20 bg-white">
+  <div className="max-w-6xl mx-auto w-full">
+    <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+      {/* Clean Profile Photo */}
+      <div className="w-40 h-40 rounded-full border-4 border-slate-100 overflow-hidden bg-slate-50 shadow-sm flex-shrink-0">
+        <img 
+          src="/fariz-photo.jpg" 
+          alt="Fariz Albab" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="text-center md:text-left">
+        <h1 className="text-6xl font-black tracking-tight text-slate-900 leading-none">
+          FARIZ ALBAB
+        </h1>
+        <p className="text-xl text-slate-600 mt-3 font-medium tracking-tight">
+          <T id="Pemimpin IT | Pengembang Aplikasi" en="IT Leader | Application Developer" />
+        </p>
+      </div>
     </div>
-    <div>
-      <h1 className="text-6xl font-extrabold tracking-tighter text-black leading-none">
-        FARIZ ALBAB
-      </h1>
-      <p className="text-xl text-gray-500 mt-2 font-medium">
-        <T id="Pemimpin IT | Pengembang Aplikasi" en="IT Leader | Application Developer" />
-      </p>
+
+    <div className="grid grid-cols-1 lg:grid-cols-[1.5fr,1fr] gap-12 border-t border-slate-50 pt-12 items-start">
+      <div className="max-w-2xl">
+        <p className="text-lg text-slate-600 leading-relaxed font-normal">
+          <T
+            id="Saya adalah seorang Pemimpin TI dan Pengembang Aplikasi dengan pengalaman lebih dari 4 tahun di PT. Pamapersada Nusantara (member of ASTRA Group). Saya mengkhususkan diri dalam mengubah tantangan operasional yang kompleks menjadi solusi berbasis data yang memberikan nilai bisnis yang nyata melalui pendekatan pengembangan yang terstruktur."
+            en="I am an IT Leader and Application Developer with over 4+ years of experience at PT. Pamapersada Nusantara (member of ASTRA Group). I specialize in transforming complex operational challenges into data-driven solutions that deliver tangible business value through a structured development approach."
+          />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl shadow-sm">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Methodologies</p>
+        <div className="grid grid-cols-2 gap-y-3 gap-x-6">
+          {[
+            { tag: 'PDCA Cycle', color: 'text-blue-600' },
+            { tag: 'Design Thinking', color: 'text-pink-600' },
+            { tag: '8-Step Problem Solving', color: 'text-orange-600' },
+            { tag: 'Behavior Improvement', color: 'text-emerald-600' }
+          ].map(item => (
+            <div key={item.tag} className="flex items-center gap-2 text-xs font-bold text-slate-600">
+              <span className={`w-1.5 h-1.5 rounded-full bg-slate-400`}></span>
+              {item.tag}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <div className="max-w-2xl mt-8">
-    <p className="text-lg text-gray-600 leading-relaxed">
-      <T
-        id="Saya adalah Pemimpin IT & Pengembang Aplikasi dengan lebih dari 4 tahun pengalaman di PT Pamapersada Nusantara (PAMA). Fokus saya bukan hanya menulis kode, tetapi membangun solusi digital yang mendorong keunggulan operasional. Mulai dari memimpin tim aplikasi hingga mengelola infrastruktur server kritis, saya mengkhususkan diri dalam mengubah tantangan teknis kompleks menjadi dampak bisnis yang terukur—mengurangi biaya dan mengoptimalkan alur kerja shift di industri pertambangan."
-        en="I am an IT Leader & Application Developer with over 4 years of dedicated experience at PT Pamapersada Nusantara (PAMA). My focus is not just on writing code, but on building digital solutions that drive operational excellence. From leading application teams to managing critical server infrastructure, I specialize in turning complex technical challenges into measurable business impacts—reducing costs and optimizing shift workflows in the mining industry."
-      />
-    </p>
   </div>
 </section>
- 
-<div className="mt-24 border-t border-gray-100 pt-10 pb-20">
-  <h2 className="text-2xl font-black text-black mb-8 tracking-tighter uppercase italic">
-    <T id="Kredensial Profesional" en="Professional Credentials" />
-  </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div className="p-4 bg-white rounded-xl border border-gray-200 flex items-center gap-4">
-      <div className="w-12 h-12 bg-yellow-400 rounded flex items-center justify-center font-black text-xs">POP</div>
-      <div>
-        <p className="font-bold text-sm">Pengawas Operasional Pertama</p>
-        <p className="text-[10px] text-gray-400 uppercase tracking-widest">
-          <T id="Bersertifikat BNSP - Sektor Pertambangan" en="BNSP Certified - Mining Sector" />
-        </p>
-      </div>
-    </div>
-    <div className="p-4 bg-white rounded-xl border border-gray-200 flex items-center gap-4">
-      <div className="w-12 h-12 bg-red-900 text-white rounded flex items-center justify-center font-black text-xs">IQA</div>
-      <div>
-        <p className="font-bold text-sm">
-          <T id="Audit Mutu Internal" en="Internal Quality Audit" />
-        </p>
-        <p className="text-[10px] text-gray-400 uppercase tracking-widest">CPMD PAMA Head Office</p>
-      </div>
-    </div>
-    <div className="p-4 bg-white rounded-xl border border-gray-200 flex items-center gap-4">
-      <div className="w-12 h-12 bg-green-800 text-white rounded flex items-center justify-center font-black text-xs">LBP-F</div>
-      <div>
-        <p className="font-bold text-sm">
-          <T id="Program Perilaku Kepemimpinan" en="Leadership Behaviour Program" />
-        </p>
-        <p className="text-[10px] text-gray-400 uppercase tracking-widest">Kubik Leadership Training</p>
-      </div>
-    </div>
-    <div className="p-4 bg-white rounded-xl border border-gray-200 flex items-center gap-4">
-      <div className="w-12 h-12 bg-blue-800 text-white rounded flex items-center justify-center font-black text-xs">CNM</div>
-      <div>
-        <p className="font-bold text-sm">
-          <T id="Coaching dan Mentoring" en="Coaching and Mentoring" />
-        </p>
-        <p className="text-[10px] text-gray-400 uppercase tracking-widest">Kubik Leadership Training</p>
-      </div>
+
+{/* Credentials - Colorful & Simple */}
+<div className="py-20 px-8 bg-slate-50 border-t border-b border-slate-100">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-xs font-black text-slate-400 uppercase tracking-[0.2em] mb-10 text-center md:text-left">
+      <T id="Kredensial Profesional" en="Professional Credentials" />
+    </h2>
+
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      {[
+        { code: 'POP', name: 'Pengawas Operasional Pertama', org: 'BNSP Mining', color: 'bg-yellow-400 text-slate-900' },
+        { code: 'IQA', name: 'Internal Quality Audit', org: 'PAMA', color: 'bg-red-800 text-white' },
+        { code: 'LBP', name: 'Leadership Behaviour', org: 'Kubik', color: 'bg-emerald-800 text-white' },
+        { code: 'CNM', name: 'Coaching & Mentoring', org: 'Kubik', color: 'bg-blue-800 text-white' },
+        { code: 'DT', name: 'Design Thinking', org: 'PAMA', color: 'bg-pink-600 text-white' },
+        { code: '8-S', name: '8-Step Problem Solving', org: 'PAMA', color: 'bg-orange-600 text-white' }
+      ].map((cert, i) => (
+        <div key={i} className="p-5 bg-white border border-slate-200 rounded-xl flex items-center gap-4 transition-all hover:shadow-md hover:-translate-y-1 group">
+          <div className={`w-12 h-12 ${cert.color} rounded-lg flex items-center justify-center font-black text-[11px] flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform`}>
+            {cert.code}
+          </div>
+          <div className="flex flex-col">
+            <p className="font-bold text-slate-800 text-[13px] leading-[1.2] mb-1.5 pr-1 break-words">
+              {cert.name}
+            </p>
+            <p className="text-[10px] text-slate-400 font-mono uppercase tracking-[0.05em] leading-none">
+              {cert.org}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </div>
 
-{/* Gunakan 'div' sebagai pembungkus utama untuk bagian grid agar tidak dianggap paragraf */}
-<div className="p-8 bg-gray-50">
-  <h2 className="text-3xl font-bold tracking-tight text-black mb-12 flex items-center gap-2">
-    <span className="w-8 h-1 bg-yellow-400 inline-block"></span>
-    PROJECTS
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-    {/* Card 01 */}
-    <a href="/n/1" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 01 / 2022" en="Project 01 / 2022" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">ARG - Automatic Rain Gauge</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Sistem monitoring curah hujan berbasis IoT untuk mendukung operasional tambang."
-          en="IoT-based rainfall monitoring system to support mining operations."
-        />
+{/* Projects - Premium Case Study Showcase */}
+<div className="py-24 px-8 bg-white overflow-hidden">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 px-2">
+      <div className="flex-grow">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="h-[2px] w-12 bg-slate-900"></span>
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-400 font-mono">Archive 2022-now</span>
+        </div>
+        <h2 className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-[0.9]">
+          <T id="Proyek Pilihan" en="Selected Projects" />
+        </h2>
+      </div>
+      <p className="text-slate-500 font-medium max-w-[280px] text-sm md:text-right italic">
+        <T id="Transformasi digital melalui solusi data & IoT yang terukur." en="Digital transformation through measurable data & IoT solutions." />
       </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded">Real-time</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-red-50 text-red-700 rounded">Alert</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-green-50 text-green-700 rounded">IoT</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>
+    </div>
 
-    {/* Card 02 */}
-    <a href="/n/3" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 02 / 2023" en="Project 02 / 2023" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">Crew Management – Bandara</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Fit To Work, Absensi, Dashboard, Pergantian Shift, Penyimpanan HP dengan Barcode, dan Pola Istirahat Karyawan."
-          en="Integrated Fit To Work, Attendance Recording, Dashboard, Changeshift, Phone Storage with Barcode, and Rest Pattern System."
-        />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-purple-50 text-purple-700 rounded">Attendance</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-green-50 text-green-700 rounded">Fit To Work</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-orange-50 text-orange-700 rounded">Barcode</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+      {[
+        { 
+          path: '/n/1', 
+          num: '01', 
+          year: '2022', 
+          title: 'ARG - Automatic Rain Gauge', 
+          tags: ['IoT', 'Real-time Analytics'], 
+          accent: 'border-blue-500',
+          metric: 'Live Monitor',
+          desc_id: 'Sistem monitoring curah hujan berbasis IoT untuk efisiensi operasional tambang.', 
+          desc_en: 'IoT-based rainfall monitoring system optimizing mining operational response.' 
+        },
+        { 
+          path: '/n/3', 
+          num: '02', 
+          year: '2023', 
+          title: 'Crew Management System', 
+          tags: ['Attendance', 'Compliance'], 
+          accent: 'border-purple-800',
+          metric: 'Zero Conflict',
+          desc_id: 'Sistem terintegrasi untuk FTW, Absensi, dan pola istirahat karyawan.', 
+          desc_en: 'Integrated FTW, Attendance, and workforce rest pattern tracking.' 
+        },
+        { 
+          path: '/n/5', 
+          num: '03', 
+          year: '2024', 
+          title: 'OPA Dashboard Analytics', 
+          tags: ['Business Intelligence', 'Analytics'], 
+          accent: 'border-slate-800',
+          metric: 'Unified View',
+          desc_id: 'Dashboard analisis operasional terintegrasi untuk seluruh entitas bandara.', 
+          desc_en: 'Unified operational analytics dashboard across all airport entities.' 
+        },
+        { 
+          path: '/n/6', 
+          num: '04', 
+          year: '2024', 
+          title: 'Digitools - Asset Tracking', 
+          tags: ['Asset Security', 'Process'], 
+          accent: 'border-indigo-600',
+          metric: 'Secure Ops',
+          desc_id: 'Digitalisasi kontrol peminjaman tools dan keamanan manajemen aset.', 
+          desc_en: 'Digitalization of tool management and high-value asset security.' 
+        },
+        { 
+          path: '/n/2', 
+          num: '05', 
+          year: '2025', 
+          title: 'Fleet Management System', 
+          tags: ['GPS Control', 'Optimization'], 
+          accent: 'border-blue-600',
+          metric: 'IDR 769B VALUE',
+          desc_id: 'Pengendalian armada realtime yang memberikan nilai bisnis signifikan.', 
+          desc_en: 'Real-time fleet control delivering massive business value impact.' 
+        },
+        { 
+          path: '/n/4', 
+          num: '06', 
+          year: '2025', 
+          title: 'Optimite – Roster Control', 
+          tags: ['Scheduling', 'Safety'], 
+          accent: 'border-emerald-600',
+          metric: '600+ OPERATORS',
+          desc_id: 'Otomasi penjadwalan 600+ operator berbasis algoritma & OCR.', 
+          desc_en: 'Automated 600+ operator roster using advanced logic & OCR.' 
+        }
+      ].map((proj, i) => (
+        <a key={i} href={proj.path} className={`group block relative p-0 transition-all border-b border-slate-100 pb-12 hover:border-slate-900`}>
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-4">
+              <span className="text-[11px] font-black text-slate-300 font-mono tracking-tighter">#{proj.num}</span>
+              <div className={`px-2 py-0.5 border ${proj.accent.replace('border-', 'border-').replace('600', '500').replace('800', '400')} ${proj.accent.replace('border-', 'text-').replace('600', '500').replace('800', '400')} rounded text-[9px] font-black uppercase tracking-widest`}>
+                {proj.metric}
+              </div>
+            </div>
+            <span className="text-[10px] font-bold text-slate-400 tracking-widest uppercase">{proj.year}</span>
+          </div>
+          
+          <h3 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter mb-4 leading-[1.1] uppercase group-hover:translate-x-2 transition-transform duration-300">
+            {proj.title}
+          </h3>
+          
+          <p className="text-slate-500 text-sm leading-relaxed mb-10 h-12 overflow-hidden line-clamp-2 max-w-[400px]">
+            <T id={proj.desc_id} en={proj.desc_en} />
+          </p>
 
-    {/* Card 03 */}
-    <a href="/n/5" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 03 / 2024" en="Project 03 / 2024" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">OPA – Dashboard Bandara Non-PAMA</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Implementasi OPA dari PAMA, Subcont, NPE, dan Driver. Dashboard terintegrasi untuk operasional bandara Non-PAMA."
-          en="OPA implementation from PAMA, Subcont, NPE, and Drivers. Integrated dashboard for Non-PAMA airport operations."
-        />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-yellow-50 text-yellow-700 rounded">NON PAMA</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded">Dashboard</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-green-50 text-green-700 rounded">OPA</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>  
-
-    {/* Card 04 */}
-    <a href="/n/6" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 04 / 2024" en="Project 04 / 2024" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">Digitools - Advanced Tools Services</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Digitalisasi peminjaman, pengembalian, dan monitoring tools mechanic."
-          en="Digitalization of borrowing, returning, and monitoring mechanic tools."
-        />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-purple-50 text-purple-700 rounded">
-          <T id="Digitalisasi" en="Digitalization" />
-        </span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-orange-50 text-orange-700 rounded">Tools Mechanic</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-gray-100 text-gray-600 rounded">Desktop App</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>
-
-    {/* Card 05 */}
-    <a href="/n/2" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 05 / 2025" en="Project 05 / 2025" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">Fleet Management System</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Monitoring dan pengendalian armada secara realtime berbasis GPS untuk seluruh unit operasional."
-          en="Realtime fleet monitoring and control via GPS for all operational units."
-        />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-yellow-50 text-yellow-700 rounded">GPS Tracking</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded">Fleet Control</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>
-
-    {/* Card 06 */}
-    <a href="/n/4" className="group block border border-gray-200 rounded-lg p-6 bg-white hover:border-yellow-400 transition-all shadow-sm hover:shadow-md">
-      <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-        <T id="Proyek 06 / 2025" en="Project 06 / 2025" />
-      </span>
-      <h3 className="text-2xl font-bold text-black mt-2 group-hover:text-yellow-600">Operator Roster – Optimite</h3>
-      <p className="text-gray-500 mt-2 text-sm">
-        <T
-          id="Sistem Roster Terintegrasi untuk 600++ Operator, No JKP O dengan kontrol presensi berbasis OCR."
-          en="Integrated Roster System for 600++ Operators, No JKP O with OCR-based attendance control."
-        />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-2">
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-red-50 text-red-700 rounded">Operators</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-blue-50 text-blue-700 rounded">Manpower</span>
-        <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-gray-100 text-gray-600 rounded">Roster</span>
-      </div>
-      <div className="mt-6 text-sm font-bold text-black border-b-2 border-black inline-block pb-1">
-        <T id="LIHAT STUDI KASUS" en="VIEW CASE STUDY" />
-      </div>
-    </a>
-
+          <div className="flex items-center justify-between mt-auto">
+            <div className="flex flex-wrap gap-2">
+              {proj.tags.map((tag, j) => {
+                const colorPalettes = [
+                  'bg-blue-50 text-blue-600 border-blue-100',
+                  'bg-emerald-50 text-emerald-600 border-emerald-100',
+                  'bg-rose-50 text-rose-600 border-rose-100',
+                  'bg-amber-50 text-amber-600 border-amber-100',
+                  'bg-indigo-50 text-indigo-800 border-indigo-100',
+                  'bg-purple-50 text-purple-400 border-purple-100',
+                  'bg-sky-50 text-sky-600 border-sky-100',
+                  'bg-teal-50 text-teal-600 border-teal-100',
+                  'bg-fuchsia-50 text-fuchsia-600 border-fuchsia-100'
+                ];
+                // Use a seed-like approach based on project index (i) and tag index (j) to vary colors
+                const colorClass = colorPalettes[(i * 3 + j) % colorPalettes.length];
+                return (
+                  <span key={tag} className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 border rounded ${colorClass}`}>
+                    {tag}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="flex items-center gap-2 text-slate-900 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all font-black text-[10px] uppercase tracking-widest">
+              Explore <span className="text-xl leading-none">→</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
   </div>
 </div>

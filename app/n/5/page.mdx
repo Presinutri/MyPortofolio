@@ -1,143 +1,241 @@
 export const metadata = {
-  title: 'OPA Dashboard Bandara – Non-PAMA Operations (Subcont, NPE, Driver)',
+  title: 'OPA - Operational Personal Assistant',
   alternates: {
     canonical: '/n/5',
   },
 };
 
-{/* Header */}
-<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+{/* Header Section */}
+<div className="border-b border-slate-100 p-8 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
   <div>
-    <h1 className="text-4xl font-extrabold tracking-tighter text-black">OPA – Dashboard Bandara Non-PAMA</h1>
-    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 05 / AIRPORT OPERATIONS DASHBOARD</p>
+    <div className="flex items-center gap-2 mb-2">
+      <span className="px-2 py-0.5 bg-slate-700 text-white text-[10px] font-black rounded uppercase tracking-widest">Project 05</span>
+      <span className="px-2 py-0.5 bg-white border border-slate-200 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest">BI & Analytics</span>
+    </div>
+    <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase">Operator Personal Assistant</h1>
+    <p className="text-sm font-medium text-slate-500 mt-1 uppercase tracking-widest">for PAMA Business Partners</p>
   </div>
-  <div className="text-right text-gray-600">
-    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
-    <p className="text-3xl font-bold text-black">2024</p>
+  <div className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm text-right">
+    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1"><T id="Tahun Pengembangan" en="Development Year" /></p>
+    <p className="text-3xl font-black text-slate-700 leading-none">2024</p>
   </div>
 </div>
 
-{/* Konten Utama */}
+{/* Main Content Area */}
 <div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-  {/* Kolom Kiri */}
+  {/* Left Column: Context & Architecture */}
   <div>
-    ## <T id="Konteks & Masalah" en="Context & Problem" />
-    <T
-      id="Operasional bandara tidak hanya melibatkan karyawan PAMA — tetapi juga personel dari subkontraktor, NPE (Non-Production Equipment), dan driver. Sebelumnya, tidak ada platform terpadu yang dapat mengakomodasi data kehadiran, kesiapan operasional, dan laporan kinerja dari seluruh entitas ini dalam satu dashboard yang seragam."
-      en="Airport operations do not only involve PAMA employees — but also personnel from subcontractors, NPE (Non-Production Equipments), and drivers. Previously, there was no unified platform that could accommodate attendance data, operational readiness, and performance reports from all these entities in a single, consistent dashboard."
-    />
-
-    <div className="my-8 p-5 bg-yellow-50 rounded-xl border border-yellow-100">
-      <h3 className="font-bold text-yellow-800 mb-3 text-lg">🏢 <T id="Cakupan Entitas OPA" en="OPA Entity Coverage" /></h3>
-      <div className="grid grid-cols-2 gap-3 text-sm">
-        <div className="bg-white p-4 rounded-lg border border-yellow-100 text-center">
-          <span className="text-3xl">🏗️</span>
-          <p className="font-bold text-gray-800 mt-2">PAMA</p>
-          <p className="text-gray-500 text-xs"><T id="Operator Produksi Pamapersada" en="Pamapersada Production Operator" /></p>
-        </div>
-        <div className="bg-white p-4 rounded-lg border border-yellow-100 text-center">
-          <span className="text-3xl">🤝</span>
-          <p className="font-bold text-gray-800 mt-2">Subcont</p>
-          <p className="text-gray-500 text-xs"><T id="Operator Produksi Subkontraktor" en="Subcontractor Production Operator" /></p>
-        </div>
-        <div className="bg-white p-4 rounded-lg border border-yellow-100 text-center">
-          <span className="text-3xl">👤</span>
-          <p className="font-bold text-gray-800 mt-2">NPE</p>
-          <p className="text-gray-500 text-xs">Non-Production Equipment</p>
-        </div>
-        <div className="bg-white p-4 rounded-lg border border-yellow-100 text-center">
-          <span className="text-3xl">🚗</span>
-          <p className="font-bold text-gray-800 mt-2">Driver</p>
-          <p className="text-gray-500 text-xs"><T id="Pengemudi Operasional" en="Operational Drivers" /></p>
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="p-2 bg-slate-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">📊</span>
+        <T id="Konteks & Masalah" en="Context & Problem" />
+      </h2>
+      <div className="space-y-4 text-slate-700 leading-relaxed text-lg font-light">
+        <T 
+          id="Pengambilan keputusan operasional di 7+ entitas bandara sebelumnya terhambat oleh data yang terfragmentasi. Laporan tersebar di berbagai sistem tanpa satu sumber kebenaran (Single Source of Truth), memperlambat analisis strategis." 
+          en="Operational decision-making across 7+ airport entities was previously hindered by fragmented data. Reports were scattered across various systems without a single source of truth, slowing down strategic analysis."
+        />
+        <div className="p-5 bg-slate-50 border-l-4 border-slate-400 rounded-r-xl my-6">
+          <p className="text-sm text-slate-900 font-medium italic">
+            <T 
+              id="Blind spots data ini menyulitkan pemantauan KPI secara real-time dan menghambat identifikasi peluang efisiensi biaya di seluruh operasional grup." 
+              en="These data blind spots made real-time KPI monitoring difficult and hindered the identification of cost-efficiency opportunities across group-wide operations."
+            />
+          </p>
         </div>
       </div>
     </div>
 
-    ## <T id="Solusi & Fitur Dashboard" en="Solution & Dashboard Features" />
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+        <span className="p-2 bg-slate-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">🚀</span>
+        <T id="Solusi & Fitur Dashboard" en="Solution & Dashboard Features" />
+      </h2>
 
-    <T
-      id="OPA (Operator Personal Assistant) Dashboard diimplementasikan sebagai platform terintegrasi yang menyatukan data dari keempat entitas tersebut, memberikan visibility lengkap kepada manajemen bandara."
-      en="The OPA (Operator Personal Assistant) Dashboard was implemented as an integrated platform that unifies data from all four entities, providing complete visibility to airport management."
-    />
+      <div className="space-y-6 text-slate-700 leading-relaxed text-lg font-light mb-8">
+        <T 
+          id="Dashboard OPA (Operator Personal Assistant) diimplementasikan sebagai platform terintegrasi yang konsolidasi data di seluruh entitas—PAMA, subkontraktor, vendor, NPE, dan driver LV—memberikan visibilitas end-to-end bagi manajemen BANDARA. Sistem ini memberikan wawasan yang lebih cepat, presisi, dan terintegrasi penuh ke dalam status setiap entitas, memungkinkan pengambilan keputusan yang lebih cepat dan akurat." 
+          en="The OPA (Operator Personal Assistant) Dashboard was implemented as an integrated platform that consolidates data across all entities—PAMA, subcontractors, vendors, NPE, and LV drivers—providing end-to-end visibility for BANDARA management. It delivers faster, more precise, and fully integrated insights into the status of each entity, enabling quicker and more accurate decision-making."
+        />
+      </div>
 
-    **<T id="Fitur Dashboard:" en="Dashboard Features:" />**
-    * **Unified Entry Point** — <T id="Satu login dashboard untuk memantau PAMA, Subcont, NPE, dan Driver sekaligus" en="One dashboard login to monitor PAMA, Subcont, NPE, and Drivers simultaneously" />
-    * **Cross-Entity Attendance** — <T id="Laporan kehadiran yang dapat difilter dan dibandingkan antar entitas" en="Attendance reports that can be filtered and compared across entities" />
-    * **Operational Readiness** — <T id="Status kesiapan operasional harian dari setiap entitas dalam persentase real-time" en="Daily operational readiness status from each entity in real-time percentages" />
-    * **Performance KPI** — <T id="Monitoring KPI kinerja yang dikustomisasi per tipe entitas" en="Performance KPI monitoring customized per entity type" />
-    * **Compliance Tracker** — <T id="Tracking dokumen dan sertifikasi yang diperlukan oleh masing-masing entitas" en="Tracking documents and certifications required by each entity" />
-    * **Shift Summary Report** — <T id="Laporan ringkas per shift yang dikirim otomatis ke email supervisor dan manajemen" en="Concise per-shift report automatically sent to supervisor and management emails" />
-    * **Incident Logging** — <T id="Pencatatan insiden terbuka untuk semua entitas dengan workflow eskalasi" en="Open incident recording for all entities with escalation workflow" />
+      <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest mb-6">Key Dashboard Features</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { icon: '🌐', t: 'Unified Entry Point', d_id: 'Satu titik akses pusat untuk memantau seluruh entitas dalam satu dashboard terintegrasi.', d_en: 'A single access point to monitor all entities within one integrated dashboard.' },
+          { icon: '📊', t: 'Cross-Entity Attendance', d_id: 'Konsolidasi pelacakan kehadiran dengan fitur filtering dan benchmarking antar entitas.', d_en: 'Consolidated attendance tracking with filtering and benchmarking across entities.' },
+          { icon: '⚡', t: 'Operational Readiness', d_id: 'Visibilitas real-time status kesiapan harian di seluruh entitas berbasis persentase.', d_en: 'Real-time visibility of daily readiness status across all entities, presented in percentage-based metrics.' },
+          { icon: '📈', t: 'Performance KPI Monitoring', d_id: 'Pelacakan KPI yang dikustomisasi untuk setiap jenis entitas untuk evaluasi yang akurat.', d_en: 'Customized KPI tracking tailored to each entity type for accurate performance evaluation.' },
+          { icon: '🛡️', t: 'Compliance Tracker', d_id: 'Pemantauan terpusat untuk dokumen, sertifikasi, dan kepatuhan regulasi per entitas.', d_en: 'Centralized monitoring of required documents, certifications, and regulatory compliance per entity.' },
+          { icon: '📱', t: 'Shift Summary Report', d_id: 'Laporan otomatis per shift yang didistribusikan via WhatsApp, Telegram, atau email.', d_en: 'Automated, concise per-shift reports distributed to supervisors and management via WhatsApp, telegram or email.' },
+          { icon: '🚨', t: 'Incident Logging', d_id: 'Sistem pelaporan insiden terintegrasi dengan alur kerja eskalasi yang terstruktur.', d_en: 'Integrated incident reporting system with a structured escalation workflow across all entities.' }
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-slate-100/50 transition-all group">
+            <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <div className="block font-bold text-slate-900 mb-2 leading-tight uppercase text-[12px] tracking-tight">{item.t}</div>
+            <div className="block text-[11px] text-slate-500 leading-relaxed">
+              <T id={item.d_id} en={item.d_en} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
 
-    {/* Section Leadership */}
-    <div className="p-6 my-10 bg-gray-50 border-l-4 border-yellow-500 rounded-r-lg">
-      <h2 className="text-2xl font-bold text-yellow-900 !mt-0">Multi-Stakeholder Coordination</h2>
-      * **Scope Expansion** — <T id="Project ini dimulai hanya untuk internal PAMA, kemudian berhasil diperluas mencakup seluruh entitas bandara atas permintaan manajemen." en="This project started only for PAMA internal use, then was successfully expanded to cover all airport entities at management's request." />
-      * **Data Standardization** — <T id="Memimpin proses standarisasi format data dari 4 entitas berbeda dengan sistem yang berbeda-beda." en="Led the process of standardizing data formats from 4 different entities with different systems." />
-      * **Training & Rollout** — <T id="Peluncuran bertahap (phased rollout) agar setiap entitas dapat beradaptasi secara bertahap." en="Phased rollout so each entity could adapt gradually." />
+    <div className="mb-20">
+      <h2 className="text-2xl font-bold text-slate-800 mb-10 flex items-center gap-3">
+        <span className="p-2 bg-slate-900 text-white rounded-xl shadow-lg shadow-slate-200">🤝</span>
+        <T id="Kolaborasi Lintas Fungsi" en="Cross-Functional Collaboration" />
+      </h2>
+
+      <div className="grid grid-cols-1 gap-8 px-2">
+        {[
+          { 
+            t_id: 'Perluasan Jangkauan', t_en: 'Scope Expansion', 
+            d_id: 'Awalnya dikembangkan untuk internal PAMA, solusi ini berhasil diskalakan untuk mencakup seluruh entitas BANDARA, termasuk subkontraktor, NPE, dan driver LV.', 
+            d_en: 'Initially developed for internal PAMA use, the solution was successfully scaled to cover all BANDARA entities, including subcontractors, NPE, and LV drivers.' 
+          },
+          { 
+            t_id: 'Standarisasi Data', t_en: 'Data Standardization', 
+            d_id: 'Memimpin standarisasi struktur dan format data di sepuluh entitas dengan sistem berbeda, memastikan konsistensi dan integrasi yang mulus.', 
+            d_en: 'Led the standardization of data structures and formats across ten entities with different systems, ensuring consistency and seamless integration.' 
+          },
+          { 
+            t_id: 'Pelatihan & Rollout Bertahap', t_en: 'Training & Phased Rollout', 
+            d_id: 'Menjalankan pendekatan peluncuran bertahap yang terstruktur, memungkinkan setiap entitas beradaptasi secara progresif dengan gangguan operasional minimal.', 
+            d_en: 'Executed a structured, phased rollout approach, enabling each entity to adapt progressively while ensuring smooth adoption and minimal disruption.' 
+          },
+          { 
+            t_id: 'Manajemen Perubahan & Adopsi', t_en: 'Change Management & Adoption', 
+            d_id: 'Berhasil mengelola resistensi dari 800+ operator melalui engagement terstruktur, menghasilkan tingkat adopsi sistem yang tinggi.', 
+            d_en: 'Successfully managed resistance from 800+ operators through structured engagement, communication, and support, resulting in high adoption rates.' 
+          },
+          { 
+            t_id: 'Penjembatan Infrastruktur', t_en: 'Infrastructure Bridging', 
+            d_id: 'Menjembatani keterbatasan infrastruktur di lingkungan subkontraktor, memungkinkan implementasi sistem yang konsisten sambil menjaga standar operasional.', 
+            d_en: 'Bridged infrastructure limitations across subcontractor environments, enabling consistent system implementation while maintaining operational standards.' 
+          }
+        ].map((item, i) => (
+          <div key={i} className="relative pl-8 group">
+            {/* Themed Vertical Line Accent */}
+            <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-slate-100 group-hover:bg-slate-900 transition-colors"></div>
+            <div className="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-slate-200 group-hover:bg-slate-900 transition-all group-hover:scale-125"></div>
+            
+            <div className="flex flex-col gap-1">
+              <h3 className="font-black text-slate-900 text-[13px] uppercase tracking-wider">
+                <T id={item.t_id} en={item.t_en} />
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-light max-w-3xl">
+                <T id={item.d_id} en={item.d_en} />
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
-  {/* Kolom Kanan */}
-  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
-    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-      <p className="text-xs font-mono text-yellow-700 uppercase tracking-widest mb-2">Tech Stack</p>
+  {/* Right Column: Tech & Performance Sidebar */}
+  <div className="flex flex-col gap-8 md:sticky md:top-8 md:h-fit">
+    <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-xl">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Analytics Stack</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">ASP.NET MVC</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">FastAPI</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Nginx</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Linux</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Swagger</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">ETL</span>
+        {['ASP.NET Core', 'SQL Server', 'SSRS', 'Extract Transform Load', 'FastAPI', 'Nginx', 'Linux'].map(tech => (
+          <span key={tech} className="text-[10px] px-2 py-1 bg-slate-800 border border-slate-700 rounded font-mono text-slate-300">{tech}</span>
+        ))}
       </div>
     </div>
 
-    <div className="p-4 bg-white border border-gray-200 rounded-xl">
-      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
-      <div className="space-y-3">
+    <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-50 pb-2">Business Reach</p>
+      <div className="space-y-6">
         <div>
-          <p className="text-xs text-gray-400"><T id="Entitas Terintegrasi" en="Integrated Entities" /></p>
-          <p className="text-2xl font-extrabold text-green-600">4 <T id="entitas" en="entities" /></p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter"><T id="Entitas Bandara" en="Airport Entities" /></p>
+          <p className="text-3xl font-black text-slate-900">7+</p>
         </div>
         <div>
-          <p className="text-xs text-gray-400"><T id="Waktu Laporan Manual" en="Manual Report Time" /></p>
-          <p className="text-2xl font-extrabold text-blue-600">-85%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter"><T id="Integrasi Data" en="Data Integration" /></p>
+          <p className="text-3xl font-black text-blue-600"> <T id="Terintegrasi" en="Unified" /></p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-slate-700 h-full w-full"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-400">Data Visibility</p>
-          <p className="text-2xl font-extrabold text-yellow-600">100%</p>
-        </div>
+      </div>
+    </div>
+
+    <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+      <p className="text-[10px] font-black text-slate-600 uppercase tracking-widest mb-6">BI Data Pipeline</p>
+      <div className="space-y-4">
+        {[
+          { s: 'Source Systems', d_id: 'Operasional Bandara & Crew Systems', d_en: 'Airport Ops & Crew Systems' },
+          { s: 'ETL Process', d_id: 'Ekstraksi & Transformasi via Pentaho', d_en: 'Extraction & Transform via Pentaho' },
+          { s: 'Data Warehouse', d_id: 'SQL Server central repository', d_en: 'SQL Server central repository' },
+          { s: 'Logic Layer', d_id: 'Kalkulasi metrik bisnis otomatis', d_en: 'Automated business metric calculation' },
+          { s: 'Live Dashboard', d_id: 'Visualisasi Management Dashboard', d_en: 'Management Dashboard visualization' }
+        ].map((step, i) => (
+          <div key={i} className="flex gap-4 items-start relative pb-8 last:pb-0">
+            {i < 4 && <div className="absolute left-[11px] top-6 w-0.5 h-[calc(100%-16px)] bg-slate-200"></div>}
+            <div className="relative z-10 w-6 h-6 rounded-full bg-slate-700 text-white text-[10px] flex items-center justify-center font-black shrink-0 shadow-sm">{i+1}</div>
+            <div className="flex-grow pt-0.5">
+              <div className="block text-[12px] font-black text-slate-900 leading-none mb-1 uppercase tracking-tight">{step.s}</div>
+              <div className="block text-[10px] text-slate-500 font-medium leading-relaxed opacity-80"><T id={step.d_id} en={step.d_en} /></div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-{/* Bagian Impact */}
-<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Management Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Visibilitas Data Lintas Entitas:" en="Cross-Entity Data Visibility:" /></p>
-    <p className="text-4xl font-extrabold text-green-600">Realtime</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Manajemen dapat memantau kinerja semua entitas dalam satu layar tanpa koordinasi manual."
-        en="Management can monitor the performance of all entities on one screen without manual coordination."
-      />
-    </p>
-  </div>
-  
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Reporting Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Waktu Pembuatan Laporan Harian:" en="Daily Report Generation Time:" /></p>
-    <p className="text-4xl font-extrabold text-yellow-600">Auto</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Laporan shift tergenerate dan terkirim otomatis ke email manajemen setiap akhir shift."
-        en="Shift reports are automatically generated and sent to management email at the end of every shift."
-      />
-    </p>
+{/* Impact & Final Results Footer Grid */}
+<div className="p-12 bg-slate-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-2xl font-black mb-12 text-center text-slate-400 tracking-[0.2em] uppercase">
+      <T id="Dampak & Hasil Akhir" en="Impact & Results" />
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-slate-500 transition-all group">
+        <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Decision Speed</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight uppercase font-mono tracking-tighter">Real-Time Visibility</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Pengambilan keputusan yang lebih responsif melalui visibilitas data real-time di seluruh entitas." en="Enables quicker, more responsive decisions through real-time, integrated data across all entities." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-slate-500 transition-all group">
+        <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Data Integrity</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight uppercase font-mono tracking-tighter">Error Reduction</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Meminimalisir kesalahan manusia melalui proses standar sistem, menjamin konsistensi data." en="Minimizes human error through standardized, system-driven processes, ensuring consistency and reliability." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-slate-500 transition-all group">
+        <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Sustainability</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight uppercase font-mono tracking-tighter">Zero Paper</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Alur kerja digital sepenuhnya menghilangkan dokumen fisik dan meningkatkan efisiensi." en="Fully digitalized workflows eliminate manual paperwork, improving efficiency and traceability." />
+        </p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-slate-500 transition-all group">
+        <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-1.5">Compliance</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight uppercase font-mono tracking-tighter">Audit-Ready</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Seluruh aktivitas dicatat dengan timestamp untuk transparansi dan kesiapan audit." en="All activities are recorded with timestamps and user identity, ensuring transparency and compliance readiness." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-700 rounded-3xl border border-slate-500 shadow-2xl shadow-slate-900/40 relative overflow-hidden group">
+        <p className="text-slate-100 text-[10px] font-black uppercase tracking-widest mb-1.5">Operational Excellence</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight uppercase font-mono tracking-tighter">Productivity Boost</p>
+        <p className="text-xs text-slate-100 leading-relaxed font-medium">
+          <T id="Mengurangi penundaan melalui identifikasi masalah yang lebih cepat dan proaktif." en="Reduces operational delays through enhanced monitoring and proactive decision-making." />
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 

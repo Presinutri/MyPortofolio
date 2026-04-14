@@ -5,132 +5,187 @@ export const metadata = {
   },
 };
 
-{/* Header */}
-<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+{/* Header Section */}
+<div className="border-b border-emerald-100 p-8 bg-emerald-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
   <div>
-    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Operator Roster – Optimite</h1>
-    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 04 / ROSTER MANAGEMENT & OCR</p>
+    <div className="flex items-center gap-2 mb-2">
+      <span className="px-2 py-0.5 bg-emerald-600 text-white text-[10px] font-black rounded uppercase tracking-widest">Project 04</span>
+      <span className="px-2 py-0.5 bg-white border border-emerald-200 text-emerald-600 text-[10px] font-bold rounded uppercase tracking-widest">Optimization & OCR</span>
+    </div>
+    <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase">Operator Roster – Optimite</h1>
+    <p className="text-sm font-medium text-emerald-500 mt-1 uppercase tracking-widest">Roster Management & Workforce Optimization</p>
   </div>
-  <div className="text-right text-gray-600">
-    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
-    <p className="text-3xl font-bold text-black">2024</p>
+  <div className="bg-white p-4 rounded-2xl border border-emerald-100 shadow-sm text-right">
+    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1"><T id="Tahun Pengembangan" en="Development Year" /></p>
+    <p className="text-3xl font-black text-emerald-600 leading-none">2025</p>
   </div>
 </div>
 
-{/* Konten Utama */}
+{/* Main Content Area */}
 <div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-  {/* Kolom Kiri */}
+  {/* Left Column: Context & Architecture */}
   <div>
-    ## <T id="Konteks & Masalah" en="Context & Problem" />
-    <T
-      id="Mengelola jadwal roster untuk 600++ operator alat berat dalam sistem shift 3 regu adalah tantangan besar. Penjadwalan manual menyebabkan konflik jadwal, kelebihan lembur yang tidak terdeteksi, ketidakpatuhan regulasi JKP (Jaminan Kecelakaan Pekerjaan), dan presensi yang sulit divalidasi di lapangan secara akurat."
-      en="Managing roster schedules for 600++ heavy equipment operators in a 3-crew shift system is a major challenge. Manual scheduling caused schedule conflicts, undetected overtime excess, non-compliance with JKP (Work Accident Insurance) regulations, and attendance that was difficult to validate accurately in the field."
-    />
-
-    <div className="my-8 p-5 bg-red-50 rounded-xl border border-red-100">
-      <h3 className="font-bold text-red-800 mb-3 text-lg">📋 <T id="Tantangan Skala Besar" en="Large-Scale Challenges" /></h3>
-      <div className="grid grid-cols-2 gap-3 text-sm">
-        <div className="bg-white p-3 rounded-lg border border-red-100">
-          <p className="font-bold text-3xl text-red-600">600+</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Total Operator Terdaftar" en="Total Registered Operators" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-red-100">
-          <p className="font-bold text-3xl text-blue-600">3</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Regu Shift Bergilir" en="Rotating Shift Crews" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-red-100">
-          <p className="font-bold text-3xl text-green-600">30+</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Tipe Unit / Jabatan" en="Unit Types / Positions" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-red-100">
-          <p className="font-bold text-3xl text-purple-600">OCR</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Verifikasi Presensi Lapangan" en="Field Attendance Verification" /></p>
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="p-2 bg-emerald-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">📋</span>
+        <T id="Konteks & Masalah" en="Context & Problem" />
+      </h2>
+      <div className="space-y-4 text-slate-700 leading-relaxed text-lg font-light">
+        <T 
+          id="Mengelola jadwal roster untuk 600+ operator alat berat di sistem 3 kru sangat kompleks. Tanpa sistem real-time, konflik jadwal dan pelanggaran fatigue sering terjadi, mengakibatkan operator standby sementara unitnya idle." 
+          en="Managing roster schedules for 600+ heavy equipment operators across a 3-crew system is highly complex. Without a real-time system, schedule conflicts and fatigue violations were frequent, leading to operators standing by while units sat idle."
+        />
+        <div className="p-5 bg-orange-50 border-l-4 border-orange-500 rounded-r-xl my-6">
+          <p className="text-sm text-orange-900 font-medium italic">
+            <T 
+              id="Inefisiensi ini berdampak langsung pada biaya manpower yang besar dan menghambat pencapaian target produksi harian secara signifikan." 
+              en="This inefficiency directly impacts significant manpower costs and severely hinders the achievement of daily production targets."
+            />
+          </p>
         </div>
       </div>
     </div>
 
-    ## <T id="Solusi & Fitur" en="Solution & Features" />
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+        <span className="p-2 bg-emerald-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">⚡</span>
+        <T id="Solusi & Fitur Optimite" en="Solution & Optimite Features" />
+      </h2>
 
-    <T
-      id="Optimite adalah sistem roster terintegrasi yang dirancang khusus untuk skala operasional besar. Menggunakan algoritma penjadwalan otomatis dengan constraint rules yang dapat dikonfigurasi sesuai regulasi internal dan eksternal."
-      en="Optimite is an integrated roster system specifically designed for large-scale operational environments. It uses an automatic scheduling algorithm with configurable constraint rules in accordance with internal and external regulations."
-    />
-
-    **<T id="Fitur Unggulan:" en="Key Features:" />**
-    * **Auto-Roster Generator** — <T id="Sistem otomatis membuat jadwal optimal berdasarkan kompetensi, ketersediaan, dan regulasi JKP" en="System automatically creates optimal schedules based on competency, availability, and JKP regulations" />
-    * **No JKP-O Control** — <T id="Sistem mendeteksi dan mencegah operator yang habis masa JKP-nya untuk dijadwalkan beroperasi" en="System detects and prevents operators with expired JKP from being scheduled for operation" />
-    * **OCR Attendance Verification** — <T id="Operator melakukan presensi dengan foto/scan dokumen yang diverifikasi menggunakan teknologi OCR" en="Operators check in with document photos/scans verified using OCR technology" />
-    * **Swap & Replacement Engine** — <T id="Proses pertukaran jadwal antar operator dengan approval workflow digital" en="Schedule exchange process between operators with digital approval workflow" />
-    * **Overtime Tracker** — <T id="Monitoring akumulasi lembur per operator dengan alert otomatis jika mendekati batas regulasi" en="Overtime accumulation monitoring per operator with automatic alerts when approaching regulatory limits" />
-    * **Competency Matching** — <T id="Penjadwalan mempertimbangkan SIO (Surat Izin Operator) dan kompetensi unit spesifik" en="Scheduling considers SIO (Operator License) and specific unit competencies" />
-    * **Real-time Dashboard** — <T id="Supervisor melihat status kehadiran dan posisi operator secara realtime" en="Supervisors view operator attendance status and positions in real-time" />
-
-    {/* Section Leadership */}
-    <div className="p-6 my-10 bg-gray-50 border-l-4 border-red-600 rounded-r-lg">
-      <h2 className="text-2xl font-bold text-red-900 !mt-0">Leadership & Compliance Success</h2>
-      * **Regulatory Compliance** — <T id="Zero pelanggaran regulasi JKP-O sejak implementasi sistem — semua operator yang bertugas dipastikan memiliki sertifikasi aktif." en="Zero JKP-O regulatory violations since system implementation — all on-duty operators are ensured to have active certifications." />
-      * **Cross-departmental Coordination** — <T id="Integrasi data antara tim HR, tim operasional, dan tim safety dalam satu platform." en="Data integration between HR team, operational team, and safety team in one platform." />
-      * **Change Management** — <T id="Memimpin pelatihan dan transisi dari sistem roster Excel ke Optimite untuk 600+ pengguna." en="Led training and transition from Excel roster system to Optimite for 600+ users." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { icon: '🤖', t: 'Auto-Roster Generator', d_id: 'Sistem otomatis membuat jadwal optimal berdasarkan kompetensi dan ketersediaan.', d_en: 'Automatically generates optimal schedules based on operator competency and availability.' },
+          { icon: '🎯', t: 'Zero Unutilized Operator', d_id: 'Memastikan tidak ada operator standby tanpa tugas dengan alokasi di semua unit.', d_en: 'Ensures zero operators remain standby without assignment through total unit allocation.' },
+          { icon: '📸', t: 'OCR Attendance', d_id: 'Check-in presensi menggunakan foto/scan dokumen yang diverifikasi otomatis teknologi OCR.', d_en: 'Operator check-in using document photos/scans verified automatically through OCR technology.' },
+          { icon: '🔄', t: 'Swap Engine', d_id: 'Memfasilitasi pertukaran jadwal antar operator dengan approval digital terstruktur.', d_en: 'Facilitates schedule exchanges between operators with a structured digital approval workflow.' },
+          { icon: '⏳', t: 'Overtime Tracker', d_id: 'Memantau akumulasi lembur per operator dengan alert otomatis saat mendekati limit.', d_en: 'Monitors overtime accumulation per operator with automated alerts when approaching limits.' },
+          { icon: '🪪', t: 'Competency Matching', d_id: 'Memastikan penjadwalan selaras dengan Izin Operator (SIO) dan kompetensi unit.', d_en: 'Ensures scheduling aligns with Operator License and specific unit competencies.' } 
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-emerald-50/30 border border-emerald-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-emerald-100/50 transition-all group">
+            <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <div className="block font-bold text-slate-900 mb-2 leading-tight uppercase text-[12px] tracking-tight">{item.t}</div>
+            <div className="block text-[11px] text-slate-500 leading-relaxed">
+              <T id={item.d_id} en={item.d_en} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
-  {/* Kolom Kanan */}
-  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
-    <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
-      <p className="text-xs font-mono text-red-700 uppercase tracking-widest mb-2">Tech Stack</p>
+  {/* Right Column: Tech & Scale Sidebar */}
+  <div className="flex flex-col gap-8 md:sticky md:top-8 md:h-fit">
+    <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-xl">
+      <p className="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-4">Tech Infrastructure</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SSRS</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Reporting Services</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Windows Server</span> 
+        {['SQL Server', 'SSRS', 'Reporting Services', 'Windows Server', 'Store Procedure'].map(tech => (
+          <span key={tech} className="text-[10px] px-2 py-1 bg-slate-800 border border-slate-700 rounded font-mono text-slate-300">{tech}</span>
+        ))}
       </div>
     </div>
 
-    <div className="p-4 bg-white border border-gray-200 rounded-xl">
-      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
-      <div className="space-y-3">
+    <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-50 pb-2">Manpower Scale</p>
+      <div className="space-y-6">
         <div>
-          <p className="text-xs text-gray-400"><T id="Waktu Pembuatan Roster" en="Roster Creation Time" /></p>
-          <p className="text-2xl font-extrabold text-green-600">2 <T id="jam" en="hrs" /> → 5 <T id="mnt" en="min" /></p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Total Operators</p>
+          <p className="text-3xl font-black text-emerald-600">600+</p>
         </div>
         <div>
-          <p className="text-xs text-gray-400"><T id="Pelanggaran JKP-O" en="JKP-O Violations" /></p>
-          <p className="text-2xl font-extrabold text-blue-600">0 <T id="kasus" en="cases" /></p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Standby Rate</p>
+          <p className="text-3xl font-black text-blue-600">0%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-blue-600 h-full w-full"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-400">OCR Attendance Accuracy</p>
-          <p className="text-2xl font-extrabold text-orange-600">97.3%</p>
-        </div>
+      </div>
+    </div>
+
+    <div className="p-6 bg-emerald-50 rounded-3xl border border-emerald-100">
+      <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-6">Roster Lifecycle</p>
+      <div className="space-y-4">
+        {[
+          { s: 'Data Sync', d_id: 'Import ketersediaan & kompetensi', d_en: 'Import availability & competencies' },
+          { s: 'Logic Engine', d_id: 'Generasi jadwal otomatis per shift', d_en: 'Automatic schedule generation per shift' },
+          { s: 'OCR Check-in', d_id: 'Verifikasi dokumen presensi otomatis', d_en: 'Automated attendance document verification' },
+          { s: 'Optimization', d_id: 'Real-time allocation adjustment', d_en: 'Real-time allocation adjustment' },
+          { s: 'Publishing', d_id: 'Broadcast jadwal ke kru & supervisor', d_en: 'Broadcast schedules to crew & supervisors' }
+        ].map((step, i) => (
+          <div key={i} className="flex gap-4 items-start relative pb-8 last:pb-0">
+            {i < 4 && <div className="absolute left-[11px] top-6 w-0.5 h-[calc(100%-16px)] bg-emerald-200"></div>}
+            <div className="relative z-10 w-6 h-6 rounded-full bg-emerald-600 text-white text-[10px] flex items-center justify-center font-black shrink-0 shadow-sm">{i+1}</div>
+            <div className="flex-grow pt-0.5">
+              <div className="block text-[12px] font-black text-slate-900 leading-none mb-1 uppercase tracking-tight">{step.s}</div>
+              <div className="block text-[10px] text-emerald-700 font-medium leading-relaxed opacity-80"><T id={step.d_id} en={step.d_en} /></div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-{/* Bagian Impact */}
-<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Compliance Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Pelanggaran Regulasi JKP-O Sejak Live:" en="JKP-O Regulatory Violations Since Live:" /></p>
-    <p className="text-4xl font-extrabold text-green-600">ZERO</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Sistem mencegah penjadwalan operator dengan status JKP kadaluarsa secara otomatis."
-        en="The system automatically prevents scheduling operators with expired JKP status."
-      />
-    </p>
-  </div>
-  
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Efficiency Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Penghematan Waktu Admin Roster / Bulan:" en="Roster Admin Time Savings / Month:" /></p>
-    <p className="text-4xl font-extrabold text-red-600">~40 <T id="jam" en="hrs" /></p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Roster 600+ operator yang dulunya manual kini selesai otomatis dalam menit."
-        en="The 600+ operator roster that was previously manual is now completed automatically in minutes."
-      />
-    </p>
+{/* Impact & Final Results Footer Grid */}
+<div className="p-12 bg-slate-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-2xl font-black mb-12 text-center text-emerald-400 tracking-[0.2em] uppercase">
+      <T id="Dampak & Hasil Akhir" en="Impact & Results" />
+    </h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-emerald-500 transition-all group">
+        <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Operational Control</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter uppercase font-mono">Zero Standby</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Mencapai nol operator standby sejak implementasi, memastikan alokasi optimal dan utilisasi maksimal." en="Achieved zero operator standby since implementation, ensuring optimal assignment and maximum utilization." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-emerald-500 transition-all group">
+        <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Compliance</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter uppercase font-mono">Fatigue Control</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Menegakkan aturan waktu istirahat dan batas lembur, mengurangi risiko kelelahan dan menjaga keselamatan." en="Enforces work-rest rules and overtime limits, reducing fatigue risk while maintaining safety compliance." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-emerald-500 transition-all group">
+        <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Decision-Making</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter uppercase font-mono">Faster Response</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Visibilitas real-time memungkinkan keputusan operasional dan respons yang lebih cepat dan akurat." en="Real-time visibility enables quicker, more accurate operational decisions and response." />
+        </p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-emerald-500 transition-all group">
+        <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Collaboration</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter uppercase font-mono">Cross-Department</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Mengintegrasikan data HR, Operasi, dan Keselamatan ke dalam platform tunggal untuk kolaborasi yang mulus." en="Integrates HR, Operations, and Safety data into a single platform for seamless collaboration." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-emerald-500 transition-all group">
+        <p className="text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Change Management</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter uppercase font-mono">600+ Users</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Memimpin transisi dari sistem Excel ke Optimite untuk 600+ pengguna, memastikan adopsi sistem yang tinggi." en="Led training and transition from an Excel-based roster system to Optimite for 600+ users, ensuring strong adoption." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-emerald-600 rounded-3xl border border-emerald-400 shadow-2xl shadow-emerald-900/40 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">⚡</div>
+        <p className="text-emerald-100 text-[10px] font-black uppercase tracking-widest mb-1.5">Efficiency</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight tracking-tighter uppercase font-mono whitespace-nowrap">Maximized</p>
+        <p className="text-[10px] text-emerald-100 uppercase font-black mb-3">Productivity & Cost</p>
+        <p className="text-xs text-emerald-50 leading-relaxed font-medium">
+          <T id="Mengubah tenaga kerja—komponen biaya terbesar—menjadi aset operasional yang sangat efisien." en="Transforms manpower—one of the largest cost components—into a highly efficient operational asset." />
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 

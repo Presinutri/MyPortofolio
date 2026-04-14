@@ -1,189 +1,177 @@
 export const metadata = {
-  title: 'Crew Management Bandara – Fit To Work & Attendance System',
+  title: 'Crew Management System – Airport Operations',
   alternates: {
     canonical: '/n/3',
   },
 };
 
-{/* Header */}
-<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+{/* Header Section */}
+<div className="border-b border-purple-100 p-8 bg-purple-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
   <div>
-    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Crew Management – Bandara</h1>
-    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 03 / AIRPORT OPERATIONS</p>
+    <div className="flex items-center gap-2 mb-2">
+      <span className="px-2 py-0.5 bg-purple-600 text-white text-[10px] font-black rounded uppercase tracking-widest">Project 03</span>
+      <span className="px-2 py-0.5 bg-white border border-purple-200 text-purple-600 text-[10px] font-bold rounded uppercase tracking-widest">Airport Operations & Safety</span>
+    </div>
+    <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase">Crew Management – Bandara</h1>
+    <p className="text-sm font-medium text-purple-500 mt-1 uppercase tracking-widest">Full Digitalization & fatigue Risk Management</p>
   </div>
-  <div className="text-right text-gray-600">
-    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
-    <p className="text-3xl font-bold text-black">2023</p>
+  <div className="bg-white p-4 rounded-2xl border border-purple-100 shadow-sm text-right">
+    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1"><T id="Tahun Pengembangan" en="Development Year" /></p>
+    <p className="text-3xl font-black text-purple-600 leading-none">2023</p>
   </div>
 </div>
 
-{/* Konten Utama */}
+{/* Main Content Area */}
 <div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-  {/* Kolom Kiri */}
+  {/* Left Column: Context & Architecture */}
   <div>
-    ## <T id="Konteks & Masalah" en="Context & Problem" />
-    <T
-      id="Operasional crew di bandara melibatkan ratusan operator yang bekerja dalam sistem shift bergilir. Proses manual untuk verifikasi kesiapan kerja (Fit To Work), pencatatan absensi, rotasi operator saat changeshift, dan pengelolaan istirahat sangat rentan terhadap human error, manipulasi data, dan inefisiensi waktu."
-      en="Airport crew operations involve hundreds of operators working in rotating shift systems. Manual processes for work readiness verification (Fit To Work), attendance recording, operator rotation during changeshift, and rest management are highly prone to human error, data manipulation, and time inefficiency."
-    />
-
-    <div className="my-8 p-5 bg-purple-50 rounded-xl border border-purple-100">
-      <h3 className="font-bold text-purple-800 mb-3 text-lg">✈️ <T id="Modul Terintegrasi" en="Integrated Modules" /></h3>
-      <div className="grid grid-cols-1 gap-2 text-sm">
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">🩺</span>
-          <div>
-            <p className="font-bold text-gray-800">Fit To Work (FTW)</p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Pemeriksaan kesiapan fisik & mental operator sebelum shift dimulai"
-                en="Physical & mental readiness check for operators before shift starts"
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">📋</span>
-          <div>
-            <p className="font-bold text-gray-800">Attendance Recording</p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Pencatatan absensi digital terintegrasi dengan data shift"
-                en="Digital attendance recording integrated with shift data"
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">🔄</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Sistem Penggantian Operator (Changeshift)" en="Operator Replacement System (Changeshift)" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Digitalisasi serah terima antar shift dengan konfirmasi digital"
-                en="Digitalization of handover between shifts with digital confirmation"
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">📱</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Penyimpanan HP dengan Barcode" en="Phone Storage with Barcode" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Sistem penitipan HP menggunakan scan barcode — tracking lokus simpan per operator"
-                en="Phone storage system using barcode scan — tracks storage location per operator"
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">💤</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Pola Istirahat Karyawan" en="Employee Rest Pattern" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Scheduling & monitoring pola istirahat sesuai regulasi keselamatan kerja"
-                en="Scheduling & monitoring rest patterns in accordance with occupational safety regulations"
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">📊</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Dashboard Manajemen" en="Management Dashboard" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Rekap harian, mingguan, dan bulanan seluruh aktivitas crew"
-                en="Daily, weekly, and monthly recap of all crew activities"
-              />
-            </p>
-          </div>
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="p-2 bg-purple-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">🩺</span>
+        <T id="Konteks & Masalah" en="Context & Problem" />
+      </h2>
+      <div className="space-y-4 text-slate-700 leading-relaxed text-lg font-light">
+        <T 
+          id="Manajemen ratusan kru dalam operasi 24/7 menuntut koordinasi yang sangat ketat. Sebelumnya, verifikasi kesiapan kerja (Fit to Work), absensi, dan monitoring istirahat dilakukan secara manual—menciptakan risiko keamanan dan inefisiensi krusial." 
+          en="Managing hundreds of crew members in 24/7 operations requires strict coordination. Previously, Fit to Work (FTW) verification, attendance, and rest monitoring were handled manually—creating security risks and crucial inefficiencies."
+        />
+        <div className="p-5 bg-purple-50 border-l-4 border-purple-500 rounded-r-xl my-6">
+          <p className="text-sm text-purple-900 font-medium italic">
+            <T 
+              id="Keterlambatan pergantian shift selama 5 menit saja dapat mengakibatkan kerugian operasional sebesar IDR 41 Juta karena tertundanya pemanfaatan alat berat." 
+              en="Even a 5-minute delay in shift changes can lead to operational losses of IDR 41 Million due to stalled equipment utilization."
+            />
+          </p>
         </div>
       </div>
     </div>
 
-    ## <T id="Solusi & Dampak" en="Solution & Impact" />
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+        <span className="p-2 bg-purple-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">✈️</span>
+        <T id="Modul Terintegrasi (BANDARA)" en="Integrated Modules (BANDARA)" />
+      </h2>
 
-    <T
-      id="Sistem dibangun sebagai platform terpadu yang menggabungkan seluruh proses crew management dalam satu ekosistem digital. Supervisor dapat memantau status seluruh crew secara realtime dari dashboard, termasuk siapa yang sudah FTW, siapa yang sedang istirahat, dan di mana HP disimpan."
-      en="The system was built as a unified platform that consolidates all crew management processes into a single digital ecosystem. Supervisors can monitor the status of all crew in real-time from the dashboard, including who has completed FTW, who is on break, and where their phone is stored."
-    />
-
-    {/* Section Leadership */}
-    <div className="p-6 my-10 bg-gray-50 border-l-4 border-purple-600 rounded-r-lg">
-      <h2 className="text-2xl font-bold text-purple-900 !mt-0">Leadership & Compliance Impact</h2>
-      * **Safety Compliance** — <T id="Sistem FTW memastikan tidak ada operator yang bekerja dalam kondisi tidak fit, sesuai regulasi keselamatan bandara." en="The FTW system ensures no operator works in an unfit condition, in compliance with airport safety regulations." />
-      * **Zero Paper Process** — <T id="Seluruh proses yang sebelumnya berbasis kertas berhasil didigitalisasi 100%." en="All previously paper-based processes have been successfully digitized 100%." />
-      * **Audit Trail** — <T id="Setiap tindakan tercatat dengan timestamp dan identitas pengguna untuk keperluan audit." en="Every action is recorded with a timestamp and user identity for audit purposes." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { icon: '🩺', t: 'Fit To Work (FTW)', d_id: 'Verifikasi kesehatan digital sebelum shift dimulai untuk menjamin keselamatan.', d_en: 'Digital health verification before shift starts to guarantee uncompromised safety.' },
+          { icon: '📋', t: 'Live Attendance', d_id: 'Pencatatan kehadiran real-time yang langsung terhubung dengan alokasi shift.', d_en: 'Real-time attendance recording directly linked to automated shift allocation.' },
+          { icon: '🔄', t: 'Changeshift Control', d_id: 'Digitalisasi serah terima antar shift untuk meminimalkan waktu menganggur alat.', d_en: 'Digitalization of shift handovers to minimize heavy equipment idle time.' },
+          { icon: '📱', t: 'Barcode Storage', d_id: 'Sistem penitipan HP berbasis barcode untuk mencegah distraksi di area operasional.', d_en: 'Barcode-based phone storage system preventing distractions in operational zones.' },
+          { icon: '💤', t: 'Fatigue Monitoring', d_id: 'Pelacakan pola istirahat kru sesuai regulasi untuk mencegah kelelahan.', d_en: 'Tracking crew rest patterns according to regulations to prevent fatigue-related incidents.' },
+          { icon: '📊', t: 'Central Dashboard', d_id: 'Pusat kontrol data untuk monitoring aktivitas kru secara end-to-end.', d_en: 'Data control center for end-to-end monitoring of all crew activities.' }
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-purple-50/30 border border-purple-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-purple-100/50 transition-all group">
+            <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <div className="block font-bold text-slate-900 mb-2 leading-tight uppercase text-[12px] tracking-tight">{item.t}</div>
+            <div className="block text-[11px] text-slate-500 leading-relaxed">
+              <T id={item.d_id} en={item.d_en} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
-  {/* Kolom Kanan */}
-  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
-    <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl">
-      <p className="text-xs font-mono text-purple-700 uppercase tracking-widest mb-2">Tech Stack</p>
+  {/* Right Column: Tech & Performance Sidebar */}
+  <div className="flex flex-col gap-8 md:sticky md:top-8 md:h-fit">
+    <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-xl">
+      <p className="text-[10px] font-black text-purple-400 uppercase tracking-widest mb-4">Tech Ecosystem</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">ASP.NET MVC</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Barcode</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Pentaho</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Nginx</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Linux</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">ETL</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">FastAPI</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Swagger</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">CRUD</span>
+        {['ASP.NET MVC', 'SQL Server', 'Barcode', 'Pentaho', 'Nginx', 'FastAPI', 'ETL'].map(tech => (
+          <span key={tech} className="text-[10px] px-2 py-1 bg-slate-800 border border-slate-700 rounded font-mono text-slate-300">{tech}</span>
+        ))}
       </div>
     </div>
 
-    <div className="p-4 bg-white border border-gray-200 rounded-xl">
-      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
-      <div className="space-y-3">
+    <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-50 pb-2">Operational Gains</p>
+      <div className="space-y-6">
         <div>
-          <p className="text-xs text-gray-400"><T id="Penggunaan Kertas" en="Paper Usage" /></p>
-          <p className="text-2xl font-extrabold text-green-600">-100%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Paper Elimination</p>
+          <p className="text-3xl font-black text-purple-600">100%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-purple-600 h-full w-full"></div>
+          </div>
         </div>
         <div>
-          <p className="text-xs text-gray-400"><T id="Waktu Proses Changeshift" en="Changeshift Process Time" /></p>
-          <p className="text-2xl font-extrabold text-blue-600">-70%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Process Speed Up</p>
+          <p className="text-3xl font-black text-blue-600">+70%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-blue-500 h-full w-[70%]"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-400"><T id="Insiden HP Hilang / Tertukar" en="Lost / Mixed-up Phone Incidents" /></p>
-          <p className="text-2xl font-extrabold text-orange-600">0 <T id="kasus" en="cases" /></p>
-        </div>
+      </div>
+    </div>
+
+    <div className="p-6 bg-purple-50 rounded-3xl border border-purple-100">
+      <p className="text-[10px] font-black text-purple-600 uppercase tracking-widest mb-6">Crew Readiness Pipeline</p>
+      <div className="space-y-4">
+        {[
+          { s: 'Biometric Login', d_id: 'Identifikasi identitas kru digital', d_en: 'Digital identifying of crew identity' },
+          { s: 'Health Check', d_id: 'Self-verification Fit To Work', d_en: 'Self-reporting Fit To Work health check' },
+          { s: 'Device Storage', d_id: 'Penitipan HP via Barcode system', d_en: 'Phone deposition via Barcode system' },
+          { s: 'Task Dispatch', d_id: 'Alokasi alat berat & nomor bus', d_en: 'Equipment & bus number allocation' },
+          { s: 'Pit Deployment', d_id: 'Mulai operasional di area pit', d_en: 'Start active duty in pit area' }
+        ].map((step, i) => (
+          <div key={i} className="flex gap-4 items-start relative pb-8 last:pb-0">
+            {i < 4 && <div className="absolute left-[11px] top-6 w-0.5 h-[calc(100%-16px)] bg-purple-200"></div>}
+            <div className="relative z-10 w-6 h-6 rounded-full bg-purple-600 text-white text-[10px] flex items-center justify-center font-black shrink-0 shadow-sm">{i+1}</div>
+            <div className="flex-grow pt-0.5">
+              <div className="block text-[12px] font-black text-slate-900 leading-none mb-1 uppercase tracking-tight">{step.s}</div>
+              <div className="block text-[10px] text-purple-700 font-medium leading-relaxed opacity-80"><T id={step.d_id} en={step.d_en} /></div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-{/* Bagian Impact */}
-<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Safety Impact</h3>
-    <p className="text-xs text-gray-500">Zero Non-Fit Operator on Duty:</p>
-    <p className="text-4xl font-extrabold text-green-600">100%</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Seluruh operator terverifikasi Fit To Work sebelum memulai shift."
-        en="All operators verified as Fit To Work before starting their shift."
-      />
-    </p>
-  </div>
-  
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Efficiency Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Waktu Proses Manual (sebelumnya):" en="Manual Process Time (before):" /></p>
-    <p className="text-4xl font-extrabold text-purple-600">45 → 5 <T id="mnt" en="min" /></p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Dari pendaftaran FTW hingga clearance siap bertugas."
-        en="From FTW registration to clearance ready for duty."
-      />
-    </p>
+{/* Impact & Final Results Footer Grid */}
+<div className="p-12 bg-slate-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-2xl font-black mb-12 text-center text-purple-400 tracking-[0.2em] uppercase">
+      <T id="Dampak Kepatuhan & Efisiensi" en="Compliance & Efficiency Impact" />
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-purple-500 transition-all group">
+        <p className="text-purple-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Transition Time</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">5 MIN</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Reduksi signifikan dari 15 menit per event." en="Massive reduction from 15 mins per event." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-purple-500 transition-all group">
+        <p className="text-purple-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Device Control</p>
+        <p className="text-2xl font-black text-white mb-2 tracking-tighter">0 CASES</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Nol insiden HP tertukar atau hilang." en="Zero mixed-up or lost phone incidents." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-purple-500 transition-all group text-center">
+        <p className="text-purple-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Readiness</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">100%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Seluruh operator terverifikasi siap bekerja." en="All operators verified as fit to work." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-purple-600 rounded-3xl border border-purple-400 shadow-2xl shadow-purple-900/40 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">💸</div>
+        <p className="text-purple-100 text-[10px] font-black uppercase tracking-widest mb-1.5">Revenue Impact</p>
+        <p className="text-3xl font-black text-white mb-2 leading-none tracking-tighter">IDR 84M</p>
+        <p className="text-[10px] text-purple-100 uppercase font-black mb-3">Per Shift / Per Day</p>
+        <p className="text-xs text-purple-50 leading-relaxed font-medium">
+          <T id="Revenue tambahan dari otomasi transisi shift." en="Extra revenue from automated shift transitions." />
+        </p>
+      </div>
+
+    </div>
   </div>
 </div>
 

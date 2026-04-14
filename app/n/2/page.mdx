@@ -5,134 +5,176 @@ export const metadata = {
   },
 };
 
-{/* Header */}
-<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+{/* Header Section */}
+<div className="border-b border-yellow-100 p-8 bg-yellow-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
   <div>
-    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Fleet Management System</h1>
-    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 02 / GPS REALTIME MONITORING</p>
+    <div className="flex items-center gap-2 mb-2">
+      <span className="px-2 py-0.5 bg-yellow-500 text-white text-[10px] font-black rounded uppercase tracking-widest">Project 02</span>
+      <span className="px-2 py-0.5 bg-white border border-yellow-200 text-yellow-600 text-[10px] font-bold rounded uppercase tracking-widest">GPS & Real-time Control</span>
+    </div>
+    <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase">Fleet Management System</h1>
+    <p className="text-sm font-medium text-yellow-600 mt-1 uppercase tracking-widest">Operational Efficiency & Resource Optimization</p>
   </div>
-  <div className="text-right text-gray-600">
-    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
-    <p className="text-3xl font-bold text-black">2023</p>
+  <div className="bg-white p-4 rounded-2xl border border-yellow-100 shadow-sm text-right">
+    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1"><T id="Tahun Pengembangan" en="Development Year" /></p>
+    <p className="text-3xl font-black text-yellow-500 leading-none">2025</p>
   </div>
 </div>
 
-{/* Konten Utama */}
+{/* Main Content Area */}
 <div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-  {/* Kolom Kiri */}
+  {/* Left Column: Context & Architecture */}
   <div>
-    ## <T id="Konteks & Masalah" en="Context & Problem" />
-    <T
-      id="Operasional armada di site mining memiliki ratusan unit alat berat yang bergerak setiap saat. Tanpa sistem monitoring terpusat, pengawasan posisi unit, status operasional, dan efisiensi bahan bakar dilakukan secara manual — menyebabkan blind spot data, keterlambatan respons insiden, dan pemborosan biaya operasional."
-      en="Mining site fleet operations involve hundreds of heavy equipment units moving at all times. Without a centralized monitoring system, tracking unit positions, operational status, and fuel efficiency was done manually — causing data blind spots, delayed incident response, and operational cost waste."
-    />
-
-    <div className="my-8 p-5 bg-gray-50 rounded-xl border border-gray-100">
-      <h3 className="font-bold text-gray-800 mb-3 text-lg">🚛 <T id="Lingkup Armada" en="Fleet Scope" /></h3>
-      <div className="grid grid-cols-2 gap-3 text-sm">
-        <div className="bg-white p-3 rounded-lg border border-gray-200">
-          <p className="font-bold text-2xl text-yellow-600">150+</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Unit Alat Berat Terpantau" en="Monitored Heavy Equipment Units" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-gray-200">
-          <p className="font-bold text-2xl text-blue-600">24/7</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Monitoring Realtime GPS" en="GPS Realtime Monitoring" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-gray-200">
-          <p className="font-bold text-2xl text-green-600">3 Site</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Lokasi Operasional" en="Operational Locations" /></p>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-gray-200">
-          <p className="font-bold text-2xl text-purple-600">&lt;30s</p>
-          <p className="text-gray-500 text-xs mt-1"><T id="Update Interval GPS" en="GPS Update Interval" /></p>
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="p-2 bg-yellow-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">📋</span>
+        <T id="Konteks & Tantangan" en="Context & Challenge" />
+      </h2>
+      <div className="space-y-4 text-slate-700 leading-relaxed text-lg font-light">
+        <T 
+          id="Operasional armada di lokasi penambangan melibatkan ratusan unit alat berat yang bergerak terus-menerus. Tanpa sistem pemantauan terpusat, pelacakan posisi unit, status operasional, dan efisiensi bahan bakar sangat bergantung pada proses manual." 
+          en="Mining fleet operations involve hundreds of heavy equipment units moving continuously. Without a centralized monitoring system, tracking unit positions, operational status, and fuel efficiency relied heavily on manual processes."
+        />
+        <div className="p-5 bg-red-50 border-l-4 border-red-500 rounded-r-xl my-6">
+          <p className="text-sm text-red-900 font-medium italic">
+            <T 
+              id="Inefisiensi ini menciptakan data blind spots dan keterlambatan respons insiden, yang secara langsung berdampak pada produktivitas, utilitas, dan biaya operasional yang membengkak." 
+              en="This inefficiency creates data blind spots and delayed incident response, directly impacting productivity, utilization, and causing bloated operational costs."
+            />
+          </p>
         </div>
       </div>
     </div>
 
-    ## <T id="Solusi & Fitur" en="Solution & Features" />
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+        <span className="p-2 bg-yellow-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">🚀</span>
+        <T id="Solusi & Fitur Dashboard" en="Solution & Dashboard Features" />
+      </h2>
 
-    <T
-      id="Sistem Fleet Management dibangun dengan integrasi GPS tracker pada setiap unit, terhubung ke dashboard web realtime yang dapat diakses oleh dispatcher, supervisor, dan manajemen."
-      en="The Fleet Management System was built with GPS tracker integration on every unit, connected to a real-time web dashboard accessible by dispatchers, supervisors, and management."
-    />
-
-    **<T id="Fitur Utama:" en="Key Features:" />**
-    * **Live Map Tracking** — <T id="Visualisasi posisi seluruh armada pada peta interaktif secara realtime" en="Real-time visualization of all fleet positions on an interactive map" />
-    * **<T id="Status Unit" en="Unit Status" />** — <T id="Monitor status (Beroperasi / Idle / Breakdown / Parkir) setiap unit" en="Monitor status (Operating / Idle / Breakdown / Parked) for each unit" />
-    * **Geofencing Alert** — <T id="Notifikasi otomatis jika unit keluar batas area kerja yang ditentukan" en="Automatic notification if a unit leaves the defined work area boundary" />
-    * **History Playback** — <T id="Rekam jejak perjalanan unit dapat diputar ulang per hari / shift" en="Unit journey records can be replayed by day / shift" />
-    * **Fuel Efficiency Report** — <T id="Laporan konsumsi BBM vs output produktivitas per unit" en="Fuel consumption vs productivity output report per unit" />
-    * **Maintenance Reminder** — <T id="Peringatan jadwal servis berdasarkan HM (Hour Meter) unit" en="Service schedule reminder based on unit HM (Hour Meter)" />
-    * **Remote Control Panel** — <T id="Supervisor dapat mengirim instruksi / perintah ke unit tertentu" en="Supervisors can send instructions / commands to specific units" />
-
-    {/* Section Leadership */}
-    <div className="p-6 my-10 bg-gray-50 border-l-4 border-blue-600 rounded-r-lg">
-      <h2 className="text-2xl font-bold text-blue-900 !mt-0">Leadership & Management Impact</h2>
-      * **Stakeholder Alignment** — <T id="Koordinasi intensif dengan tim operasional, mekanik, dan manajemen untuk menentukan KPI fleet yang relevan." en="Intensive coordination with operational, mechanic, and management teams to define relevant fleet KPIs." />
-      * **Vendor Integration** — <T id="Negosiasi dan integrasi teknis dengan 2 vendor GPS hardware yang berbeda dalam satu platform terpadu." en="Negotiation and technical integration with 2 different GPS hardware vendors into one unified platform." />
-      * **SOP Digitalisasi** — <T id="Memimpin proses digitalisasi SOP laporan fleet dari kertas ke dashboard digital." en="Led the process of digitalizing fleet report SOPs from paper to a digital dashboard." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { icon: '🗺️', t: 'Live Map Tracking', d_id: 'Visualisasi real-time seluruh posisi armada pada peta interaktif.', d_en: 'Real-time visualization of all fleet positions on an interactive map.' },
+          { icon: '📊', t: 'Unit Status Monitoring', d_id: 'Lacak status unit (Operating/Idle/Breakdown) untuk optimasi utilitas.', d_en: 'Track unit status (Operating/Idle/Breakdown) to optimize utilization.' },
+          { icon: '🚧', t: 'Geofencing Alert', d_id: 'Peringatan otomatis saat unit bergerak keluar dari batas jalur kerja.', d_en: 'Automatic alerts when units move outside defined work boundaries.' },
+          { icon: '⏪', t: 'History Playback', d_id: 'Putar ulang pergerakan unit per shift untuk investigasi insiden.', d_en: 'Replay unit movements by shift for incident investigations.' },
+          { icon: '⛽', t: 'Fuel Efficiency', d_id: 'Pantau konsumsi BBM versus output produktivitas per unit.', d_en: 'Monitor fuel consumption versus productivity output per unit.' },
+          { icon: '📅', t: 'Service Reminder', d_id: 'Pengingat layanan otomatis berdasarkan data Hour Meter (HM).', d_en: 'Automated service reminders based on Hour Meter (HM) data.' },
+          { icon: '🎮', t: 'Remote Instructions', d_id: 'Supervisor dapat mengirim instruksi langsung ke unit untuk koordinasi.', d_en: 'Enables supervisors to send instructions directly to units for coordination.' },
+          { icon: '🛡️', t: 'Safety Surveillance', d_id: 'Mengurangi risiko tabrakan melalui pemantauan real-time.', d_en: 'Reduces collision risks through constant real-time surveillance.' },
+          { icon: '📈', t: 'Perf Analytics', d_id: 'Analisis mendalam untuk mendorong efisiensi dan produktivitas.', d_en: 'Deep analytics to drive operational efficiency and productivity.' }
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-yellow-50/30 border border-yellow-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-yellow-100/50 transition-all group">
+            <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <div className="block font-bold text-slate-900 mb-2 leading-tight uppercase text-[12px] tracking-tight">{item.t}</div>
+            <div className="block text-[11px] text-slate-500 leading-relaxed">
+              <T id={item.d_id} en={item.d_en} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
-  {/* Kolom Kanan */}
-  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
-    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-      <p className="text-xs font-mono text-yellow-700 uppercase tracking-widest mb-2">Tech Stack</p>
+  {/* Right Column: Tech & Performance Sidebar */}
+  <div className="flex flex-col gap-8 md:sticky md:top-8 md:h-fit">
+    <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-xl">
+      <p className="text-[10px] font-black text-yellow-400 uppercase tracking-widest mb-4">Tech Infrastructure</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Node-red</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Node.js</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">PostgreSQL</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">C#</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">MQTT</span>
+        {['Node.js', 'PostgreSQL', 'MQTT', 'Node-RED', 'Services', 'C#', 'SQL Server', 'Desktop App'].map(tech => (
+          <span key={tech} className="text-[10px] px-2 py-1 bg-slate-800 border border-slate-700 rounded font-mono text-slate-300">{tech}</span>
+        ))}
       </div>
     </div>
 
-    <div className="p-4 bg-white border border-gray-200 rounded-xl">
-      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
-      <div className="space-y-3">
+    <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-50 pb-2">Operational Stats</p>
+      <div className="space-y-6">
         <div>
-          <p className="text-xs text-gray-400"><T id="Response Time Insiden" en="Incident Response Time" /></p>
-          <p className="text-2xl font-extrabold text-green-600">-65%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Response Time Improvement</p>
+          <p className="text-3xl font-black text-yellow-600">-65%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-yellow-500 h-full w-[65%]"></div>
+          </div>
         </div>
         <div>
-          <p className="text-xs text-gray-400">Fuel Monitoring Accuracy</p>
-          <p className="text-2xl font-extrabold text-blue-600">98.5%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">System Uptime</p>
+          <p className="text-3xl font-black text-emerald-600">99.9%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-emerald-500 h-full w-[99%]"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-400">Unit Idle Time</p>
-          <p className="text-2xl font-extrabold text-orange-600">-40%</p>
-        </div>
+      </div>
+    </div>
+
+    <div className="p-6 bg-yellow-50 rounded-3xl border border-yellow-100">
+      <p className="text-[10px] font-black text-yellow-600 uppercase tracking-widest mb-6">GPS Data Pipeline</p>
+      <div className="space-y-4">
+        {[
+          { s: 'GPS Signal', d_id: 'Unit memancarkan koordinat via satelit', d_en: 'Unit broadcasts coordinates via satellite' },
+          { s: 'Cloud Bridge', d_id: 'Data diterima oleh broker MQTT', d_en: 'Data received via MQTT broker' },
+          { s: 'Business Logic', d_id: 'Node-RED menghitung KPI (Speed/Idle)', d_en: 'Node-RED calculates KPIs (Speed/Idle)' },
+          { s: 'persistence', d_id: 'Store ke PostgreSQL per detik', d_en: 'Storage to PostgreSQL per second' },
+          { s: 'Real-time View', d_id: 'Socket.io push ke Live Map', d_en: 'Socket.io push to Live Map' }
+        ].map((step, i) => (
+          <div key={i} className="flex gap-4 items-start relative pb-8 last:pb-0">
+            {i < 4 && <div className="absolute left-[11px] top-6 w-0.5 h-[calc(100%-16px)] bg-yellow-200"></div>}
+            <div className="relative z-10 w-6 h-6 rounded-full bg-yellow-500 text-white text-[10px] flex items-center justify-center font-black shrink-0 shadow-sm">{i+1}</div>
+            <div className="flex-grow pt-0.5">
+              <div className="block text-[12px] font-black text-slate-900 leading-none mb-1 uppercase tracking-tight">{step.s}</div>
+              <div className="block text-[10px] text-yellow-700 font-medium leading-relaxed opacity-80"><T id={step.d_id} en={step.d_en} /></div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-{/* Bagian Impact */}
-<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Cost Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Penghematan BBM & Maintenance / Tahun:" en="Fuel & Maintenance Savings / Year:" /></p>
-    <p className="text-4xl font-extrabold text-green-600">Rp 200jt+</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Melalui efisiensi idle time dan optimasi rute armada."
-        en="Through idle time efficiency and fleet route optimization."
-      />
-    </p>
-  </div>
-  
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Operational Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Visibilitas Fleet:" en="Fleet Visibility:" /></p>
-    <p className="text-4xl font-extrabold text-blue-600">100%</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Semua unit terpantau realtime tanpa blind spot operasional."
-        en="All units monitored in real-time with no operational blind spots."
-      />
-    </p>
+{/* Impact & Final Results Footer Grid */}
+<div className="p-12 bg-slate-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-2xl font-black mb-12 text-center text-yellow-400 tracking-[0.2em] uppercase">
+      <T id="Dampak Operasional & Nilai Bisnis" en="Operational Impact & Business Value" />
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-yellow-500 transition-all group">
+        <p className="text-yellow-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Idle Time</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">↓ 15%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Peningkatan utilitas unit secara signifikan." en="Significant improvement in overall unit utilization." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-yellow-500 transition-all group">
+        <p className="text-yellow-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Cycle Time</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">↑ 12%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Kecepatan hauling yang lebih optimal & konsisten." en="More optimal & consistent hauling speeds." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-yellow-500 transition-all group">
+        <p className="text-yellow-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Compliance</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">100%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Kontrol pemeliharaan preventif berbasis HM." en="Preventive maintenance control based on HM data." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-yellow-500 rounded-3xl border border-yellow-400 shadow-2xl shadow-yellow-900/40 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">💰</div>
+        <p className="text-yellow-100 text-[10px] font-black uppercase tracking-widest mb-1.5">Business Value</p>
+        <p className="text-2xl font-black text-white mb-1 leading-none tracking-tighter"><T id="IDR 769M" en="IDR 769B" /></p>
+        <p className="text-[10px] text-yellow-100 uppercase font-black mb-3">2-Year Projection</p>
+        <p className="text-xs text-yellow-50 leading-relaxed font-medium">
+          <T id="Nilai ekonomi dari efisiensi BBM & produktivitas." en="Economic value from fuel efficiency & productivity gains." />
+        </p>
+      </div>
+
+    </div>
   </div>
 </div>
 

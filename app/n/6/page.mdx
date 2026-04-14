@@ -1,160 +1,174 @@
 export const metadata = {
-  title: 'Digitools - Advance Tools Services',
+  title: 'Digitools – Asset Security & Tracking System',
   alternates: {
     canonical: '/n/6',
   },
 };
 
-{/* Header */}
-<div className="border-b-4 border-yellow-400 p-8 bg-white flex justify-between items-start">
+{/* Header Section */}
+<div className="border-b border-indigo-100 p-8 bg-indigo-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
   <div>
-    <h1 className="text-4xl font-extrabold tracking-tighter text-black">Digitools - Advance Tools Services</h1>
-    <p className="text-sm font-mono text-gray-500 mt-2">CASE STUDY / PROJECT 06 / ADVANCED MECHANIC TOOLS</p>
+    <div className="flex items-center gap-2 mb-2">
+      <span className="px-2 py-0.5 bg-indigo-600 text-white text-[10px] font-black rounded uppercase tracking-widest">Project 06</span>
+      <span className="px-2 py-0.5 bg-white border border-indigo-200 text-indigo-600 text-[10px] font-bold rounded uppercase tracking-widest">Asset Security & Tracking</span>
+    </div>
+    <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase">Digitools</h1>
+    <p className="text-sm font-medium text-indigo-500 mt-1 uppercase tracking-widest">Digital Asset Management & Compliance Tracking</p>
   </div>
-  <div className="text-right text-gray-600">
-    <p className="text-sm"><T id="Tahun:" en="Year:" /></p>
-    <p className="text-3xl font-bold text-black">2024</p>
+  <div className="bg-white p-4 rounded-2xl border border-indigo-100 shadow-sm text-right">
+    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1"><T id="Tahun Pengembangan" en="Development Year" /></p>
+    <p className="text-3xl font-black text-indigo-600 leading-none">2023</p>
   </div>
 </div>
 
-{/* Konten Utama */}
+{/* Main Content Area */}
 <div className="p-8 grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-12 bg-white">
 
-  {/* Kolom Kiri */}
+  {/* Left Column: Context & Architecture */}
   <div>
-    ## <T id="Konteks & Masalah" en="Context & Problem" />
-    <T
-      id="Peminjaman dan pengembalian alat mekanik (mechanic tools) tadinya sering tidak terkontrol. Pengawasan yang manual oleh tools keeper menyulitkan pelacakan siapa yang meminjam alat dan siapa yang belum mengembalikannya. Seringkali alat hilang, lupa dikembalikan saat pergantian shift, atau rusak tanpa rekam jejak yang jelas, sehingga menghambat operasional perbaikan unit."
-      en="Borrowing and returning mechanic tools was previously often uncontrolled. Manual supervision by tools keepers made it difficult to track who borrowed tools and who hadn't returned them. Tools were frequently lost, forgotten to be returned during shift changes, or broken without clear trace records, hindering unit repair operations."
-    />
-
-    <div className="my-8 p-5 bg-purple-50 rounded-xl border border-purple-100">
-      <h3 className="font-bold text-purple-800 mb-3 text-lg">🧰 <T id="Solusi Advance Tools Services" en="Advance Tools Services Solution" /></h3>
-      <div className="grid grid-cols-1 gap-2 text-sm">
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">💻</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Aplikasi Desktop Khusus" en="Dedicated Desktop App" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Sistem operasi utama berbasis desktop yang dikelola secara eksklusif oleh tools keeper di lokasi penyimpanan."
-                en="Main desktop-based operating system managed exclusively by tools keepers at the storage location."
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">📱</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Login Scan QR 1PAMA App" en="1PAMA App QR Scan Login" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Mekanik meminjam alat dengan cara login scan QR Code Profile dari ponsel mereka melalui aplikasi 1PAMA."
-                en="Mechanics borrow tools by logging in via a QR Code Profile scan from their phones using the 1PAMA App."
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">📊</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Dashboard Realtime Peminjaman" en="Realtime Borrowing Dashboard" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Tools keeper bisa langsung melihat laporan daftar alat yang dipinjam, siapa peminjamnya, dan siapa yang belum mengembalikan."
-                en="Tools keepers can instantly view a report of borrowed tools, who borrowed them, and who hasn't returned them."
-              />
-            </p>
-          </div>
-        </div>
-        <div className="bg-white p-3 rounded-lg border border-purple-100 flex items-center gap-3">
-          <span className="text-2xl">🔔</span>
-          <div>
-            <p className="font-bold text-gray-800"><T id="Alert Pengingat Shift" en="Shift Reminder Alert" /></p>
-            <p className="text-gray-500 text-xs">
-              <T
-                id="Jika hingga akhir shift alat belum dikembalikan, alert pengingat akan otomatis dikirim ke 1PAMA App sang mekanik."
-                en="If tools are not returned by the end of the shift, a reminder alert is automatically sent to the mechanic's 1PAMA App."
-              />
-            </p>
-          </div>
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="p-2 bg-indigo-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">🛠️</span>
+        <T id="Konteks & Masalah" en="Context & Problem" />
+      </h2>
+      <div className="space-y-4 text-slate-700 leading-relaxed text-lg font-light">
+        <T 
+          id="Pengelolaan tools mekanik di lingkungan operasional workshop alat berat sebelumnya tidak termonitor dengan baik. Dengan sistem manual, masih terdapat risiko hilangnya tools berharga dan kurangnya akuntabilitas pengguna." 
+          en="The management of mechanical tools in the heavy equipment workshop’s operational environment was previously not well-monitored. With manual systems, the risk of losing valuable assets and the lack of user accountability remained."
+        />
+        <div className="p-5 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-xl my-6">
+          <p className="text-sm text-indigo-900 font-medium italic">
+            <T 
+              id="Setiap tools yang hilang tidak hanya merusak anggaran tetapi juga menghambat proses maintenance kritis yang memerlukan tools spesifik pada waktu yang tepat." 
+              en="Every lost asset doesn't just damage the budget—it hinders critical maintenance processes that require specific tools at the right time."
+            />
+          </p>
         </div>
       </div>
     </div>
 
-    ## <T id="Solusi & Dampak" en="Solution & Impact" />
+    <div className="mb-12">
+      <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+        <span className="p-2 bg-indigo-200 text-slate-900 rounded-lg whitespace-nowrap overflow-hidden">🚀</span>
+        <T id="Solusi & Fitur Digitools" en="Solution & Digitools Features" />
+      </h2>
 
-    <T
-      id="Dengan implementasi Digitools ini, seluruh siklus perpindahan inventaris fisik (mechanic tools) menjadi digital sepenuhnya. Proses verifikasi serah terima sangat akurat karena terkunci dengan otentikasi QR Code individual. Otomatisasi notifikasi akhir shift memotong keharusan tools keeper untuk mengejar peminjam secara manual."
-      en="With the implementation of Digitools, the entire physical inventory (mechanic tools) transfer cycle is fully digitized. The handover verification process is highly accurate, locked with individual QR Code authentication. End-of-shift automated notifications eliminate the need for tools keepers to chase borrowers manually."
-    />
-
-    {/* Section Leadership */}
-    <div className="p-6 my-10 bg-gray-50 border-l-4 border-purple-600 rounded-r-lg">
-      <h2 className="text-2xl font-bold text-purple-900 !mt-0">Asset Security & Compliance</h2>
-      * **Traceability** — <T id="Tidak ada lagi perdebatan posisi barang. Log siapa peminjam dan kapan alat dipinjam direkam dengan timestamp presisi." en="No more debate over item locations. Logs of who borrowed and when they were borrowed are recorded with precise timestamps." />
-      * **Integration** — <T id="Berhasil mengintegrasikan sistem profil aplikasi existing (1PAMA App) dengan platform desktop yang terisolasi." en="Successfully integrated the existing application profile system (1PAMA App) with isolated desktop platforms." />
-      * **Deterrence Effect** — <T id="Secara psikologis, kedisiplinan kru mekanik meningkat karena mereka sadar alat yang terlambat dikembalikan memicu notifikasi peringatan ke atasan." en="Psychologically, mechanic crew discipline improved because they recognized late returns triggered warning notifications to superiors." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { icon: '🔍', t: 'Automatic Tool Tracking', d_id: 'Lacak status dan lokasi peminjaman tools secara real-time.', d_en: 'Track status and loan locations of assets in real-time.' },
+          { icon: '🤳', t: 'QR-Based Authentication', d_id: 'Verifikasi peminjam menggunakan scan QR code yang aman dan cepat.', d_en: 'Borrower verification using secure and fast QR code scans.' },
+          { icon: '👤', t: 'User Accountability', d_id: 'Setiap tools yang keluar memiliki penanggung jawab yang terverifikasi.', d_en: 'Every asset out has a verified and clear responsible person.' },
+          { icon: '📉', t: 'Loss Prevention Alert', d_id: 'Alert otomatis jika tools belum dikembalikan sesuai batas waktu.', d_en: 'Automated alerts if assets are not returned within the defined time limit.' },
+          { icon: '📅', t: 'Asset Lifecycle Archive', d_id: 'Dokumentasi riwayat pemakaian tools untuk kebutuhan audit/penggantian.', d_en: 'Documentation of asset usage history for audit and replacement needs.' },
+          { icon: '🔒', t: 'Tamper-Proof Audit', d_id: 'Log peminjaman yang tidak dapat dirubah untuk integritas data tinggi.', d_en: 'Unalterable loan logs ensuring the highest data integrity.' }
+        ].map((item, i) => (
+          <div key={i} className="p-6 bg-indigo-50/30 border border-indigo-100 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-indigo-100/50 transition-all group">
+            <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <div className="block font-bold text-slate-900 mb-2 leading-tight uppercase text-[12px] tracking-tight">{item.t}</div>
+            <div className="block text-[11px] text-slate-500 leading-relaxed">
+              <T id={item.d_id} en={item.d_en} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 
-  {/* Kolom Kanan */}
-  <div className="flex flex-col gap-6 md:sticky md:top-8 md:h-fit">
-    <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl">
-      <p className="text-xs font-mono text-purple-700 uppercase tracking-widest mb-2">Tech Stack</p>
+  {/* Right Column: Tech & Scale Sidebar */}
+  <div className="flex flex-col gap-8 md:sticky md:top-8 md:h-fit">
+    <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-xl">
+      <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-4">Security Stack</p>
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">Desktop App</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">C#</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">WPF</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">SQL Server</span>
-        <span className="text-xs px-2 py-1 bg-white border border-gray-200 rounded font-mono">1PAMA API</span>
+        {['SQLite', 'FastAPI', 'Python', 'QR Code', 'JWT Auth', 'PWA'].map(tech => (
+          <span key={tech} className="text-[10px] px-2 py-1 bg-slate-800 border border-slate-700 rounded font-mono text-slate-300">{tech}</span>
+        ))}
       </div>
     </div>
 
-    <div className="p-4 bg-white border border-gray-200 rounded-xl">
-      <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Key Metrics</p>
-      <div className="space-y-3">
+    <div className="p-6 bg-white border border-slate-100 rounded-3xl shadow-sm">
+      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 border-b border-slate-50 pb-2">Asset Status</p>
+      <div className="space-y-6">
         <div>
-          <p className="text-xs text-gray-400"><T id="Tingkat Kehilangan Alat" en="Tool Loss Rate" /></p>
-          <p className="text-2xl font-extrabold text-green-600">-90%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Lost Assets</p>
+          <p className="text-3xl font-black text-indigo-600">ZERO</p>
         </div>
         <div>
-          <p className="text-xs text-gray-400"><T id="Akurasi Peminjaman" en="Borrowing Accuracy" /></p>
-          <p className="text-2xl font-extrabold text-blue-600">100%</p>
+          <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Traceability</p>
+          <p className="text-3xl font-black text-blue-600">100%</p>
+          <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className="bg-indigo-600 h-full w-full"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-400"><T id="Kepatuhan Pengembalian Tepat Waktu" en="On-Time Return Compliance" /></p>
-          <p className="text-2xl font-extrabold text-orange-600">95%</p>
-        </div>
+      </div>
+    </div>
+
+    <div className="p-6 bg-indigo-50 rounded-3xl border border-indigo-100">
+      <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-6">Asset Security Pipeline</p>
+      <div className="space-y-4">
+        {[
+          { s: 'QR Auth Scan', d_id: 'Verifikasi peminjam via digital ID', d_en: 'Digital ID borrower verification' },
+          { s: 'Asset Checkout', d_id: 'Pencatatan peminjaman tools keluar', d_en: 'Outbound asset loan recording' },
+          { s: 'Active Monitoring', d_id: 'Pelacakan real-time durasi pinjam', d_en: 'Real-time loan duration tracking' },
+          { s: 'Status Check', d_id: 'Verifikasi kondisi tools saat kembali', d_en: 'Condition verification on return' },
+          { s: 'Secure Archive', d_id: 'Penyimpanan bukti transaksi permanen', d_en: 'Permanent transaction log storage' }
+        ].map((step, i) => (
+          <div key={i} className="flex gap-4 items-start relative pb-8 last:pb-0">
+            {i < 4 && <div className="absolute left-[11px] top-6 w-0.5 h-[calc(100%-16px)] bg-indigo-200"></div>}
+            <div className="relative z-10 w-6 h-6 rounded-full bg-indigo-600 text-white text-[10px] flex items-center justify-center font-black shrink-0 shadow-sm">{i+1}</div>
+            <div className="flex-grow pt-0.5">
+              <div className="block text-[12px] font-black text-slate-900 leading-none mb-1 uppercase tracking-tight">{step.s}</div>
+              <div className="block text-[10px] text-indigo-700 font-medium leading-relaxed opacity-80"><T id={step.d_id} en={step.d_en} /></div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </div>
 
-{/* Bagian Impact */}
-<div className="p-8 bg-gray-50 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-gray-200">
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Loss Prevention Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Laporan Alat Hilang / Tidak Terlacak:" en="Lost / Untracked Tool Reports:" /></p>
-    <p className="text-4xl font-extrabold text-green-600">ZERO</p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Inventaris selalu stabil dan jelas pertanggungjawabannya setiap pergantian shift."
-        en="Inventory is always stable and its accountability is clear at every shift change."
-      />
-    </p>
-  </div>
-  
-  <div className="p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
-    <h3 className="text-lg font-semibold text-gray-600">Efficiency Impact</h3>
-    <p className="text-xs text-gray-500"><T id="Durasi Validasi Peminjaman:" en="Borrowing Validation Duration:" /></p>
-    <p className="text-4xl font-extrabold text-purple-600">&lt; 3 <T id="detik" en="sec" /></p>
-    <p className="text-sm text-gray-700 mt-2">
-      <T
-        id="Mekanik hanya perlu scan QR dari 1PAMA App tanpa pencatatan manual panjang."
-        en="Mechanics only need to scan their QR from the 1PAMA App without tedious manual logging."
-      />
-    </p>
+{/* Impact & Final Results Footer Grid */}
+<div className="p-12 bg-slate-950 text-white">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-2xl font-black mb-12 text-center text-indigo-400 tracking-[0.2em] uppercase">
+      <T id="Dampak Keamanan & Akuntabilitas" en="Security & Accountability Impact" />
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-indigo-500 transition-all group">
+        <p className="text-indigo-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Asset Integrity</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">100%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Keterlacakan penuh seluruh siklus alat." en="Full lifecycle traceability of all tools." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-indigo-500 transition-all group">
+        <p className="text-indigo-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Lost Assets</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">ZERO</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Nol kehilangan tools sejak go-live." en="Zero tools lost since go-live date." />
+        </p>
+      </div>
+
+      <div className="p-6 bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-indigo-500 transition-all group text-center">
+        <p className="text-indigo-400 text-[10px] font-black uppercase tracking-widest mb-1.5 group-hover:translate-x-1 transition-transform">Audit Ready</p>
+        <p className="text-3xl font-black text-white mb-2 tracking-tighter">100%</p>
+        <p className="text-xs text-slate-400 leading-relaxed font-light">
+          <T id="Data real-time selalu siap untuk audit." en="Real-time data always audit-ready." />
+        </p>
+      </div>
+
+      <div className="p-2 bg-indigo-600 rounded-3xl border border-indigo-400 shadow-2xl shadow-indigo-900/40 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-2 opacity-10 group-hover:scale-110 transition-transform">🔒</div>
+        <p className="text-indigo-100 text-[10px] font-black uppercase tracking-widest mb-1.5">Security Value</p>
+        <p className="text-2xl font-black text-white mb-2 leading-tight tracking-tighter uppercase whitespace-nowrap">Verified</p>
+        <p className="text-[10px] text-indigo-100 uppercase font-black mb-3">Accountability Enforced</p>
+        <p className="text-xs text-indigo-50 leading-relaxed font-medium">
+          <T id="Integritas proses peminjaman terjamin." en="Guaranteed loan process integrity." />
+        </p>
+      </div>
+
+    </div>
   </div>
 </div>
 
