@@ -7,7 +7,7 @@ export function BackButton() {
   const { lang } = useLanguage();
 
   return (
-    <div className="flex justify-center py-12">
+    <div className="flex justify-center py-12 print:hidden">
       <Link
         href="/"
         className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl font-bold text-sm tracking-wide overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
